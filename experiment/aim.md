@@ -1,1 +1,4 @@
-### Aim of the experiment
+# Aim
+
+
+To determine the compressive strength of concrete as per IS:516

@@ -1,13 +1,1616 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CubeTest</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"type="text/css">
+    <link href="bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="iitstyle.css" rel="stylesheet" type="text/css">
+    
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquerymin.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/afa6483c49.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script>
+
+        var simsubscreennum=0;
+
+        var temp=0;
+
+    </script>
+
+</head>
+
+<body style="margin:0; font-family: verdana; color: #000;">
+<table align="center">
+    <tr>
+        <td>
+            
+    <div id="simscreen">
+
+        <div id="title"><h3>Compressive Strength Test of Concrete (Cube)</h3></div>
+
+
+
+         <!-- Scene 1 -->
+
+
+
+        <div class="simsubscreen" id="canvas1" >
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;1&nbsp;</span></br>
+
+            <p class="incanvas" style="position: absolute; top: 55px; left: 0px;font-size:15px;"><strong>Objective:</strong></p>
+
+            <p class="incanvas" style="position: absolute; top: 85px; left: 0px;font-size:14px;">To determine the compressive strength of hardened concrete as per IS:516.</p></br>
+
+            <p class="incanvas" style="position: absolute; top: 115px; left: 0px;font-size:15px;"><strong>Apparatus used:</strong></p>
+
+            <p class="incanvas" style="position: absolute; top: 145px; left: 0px;font-size:14px;">Compression Testing Machine (CTM)</p></br>
+
+            <img src="images/ctm.png" style="position:absolute; left:50px; top:200px;" title="CTM" />
+
+            <img src="images/man.png" style="position:absolute; left:422px; top:130px;" height="370px" title="Man" />
+
+            <p class="incanvas" style="font-size:18px; text-align: center; position:absolute; left:580px; top:245px;"><strong>Specimen type:<br>Cube</strong></p>
+
+            <input type="button" id="nextButton1" style="position:absolute; left:610px; top:320px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px" value="&nbsp;Start Here&nbsp;" onclick="navNext1()"/>
+
+        </div>
+<!----------------------
+            <img style="position:absolute; left:730px; top:480px; cursor:pointer;" id="nextButton1" onClick="navNext1()" src="Next.png" />
+---------------------->
+        
+
+
+        <!-- Step 2 -->
+
+
+        <div class="simsubscreen" id="canvas2" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;2&nbsp;</span>
+
+            <p class="steptext" style="position: absolute; top: 30px; left: 90px;">&nbsp;Provide Specimen Details</p><br><br>
+
+            <span style="position: absolute; left: 550px; top: 106px; color: red;" id="fillBox"></span>
+
+            <p class="incanvas" style="font-size:15px;">Enter the date of casting of specimens: </p>  
+
+            <input id="ageIn" type="date" style="position: absolute; left: 320px; top: 70px; width: 150px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px;">
+            <span style="position: absolute; left: 480px; top: 75px;"> Days</span><br>
+
+
+
+            <p class="incanvas" style="font-size:15px;" >Select the size of cube specimens: </p>  
+
+             <select id="sizeIn" style="position: absolute; left: 320px;  top: 120px; width: 150px; border:none; border: 1px solid #000;  padding-top: 2px; padding-bottom: 2px;">
+                
+                <option value="0">--Select--</option>
+
+                <option>10</option>
+
+                <option>15</option>
+
+            </select>
+            <span style="position: absolute; left: 480px; top: 123px;"> cm</span>
+
+              
+
+            <input class="incanvas" id="in2" type="button" name="Submit" value="Submit" style="position: absolute; left: 310px; top: 162px; width: 150px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="agesizeIn()"/></br></br>
+
+            
+
+            <div id="details" style="visibility:hidden;">
+
+                <table style="position:absolute; left:50px; top:250px; width: auto; height: 200px;" >
+
+                    <tr>
+
+                        <td width="250px">Age of specimen</td>
+
+                        <td id="age" width="200px"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Size of specimen</td>
+
+                        <td id="size"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Cross sectional area, A<sub>c</sub></td>
+
+                        <td id="cs"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Number of specimen</td>
+
+                        <td id="num"></td>
+
+                    </tr>
+                            
+                        
+                </table>
+<!-- <span id="cubedatehidden" style="visibility: hidden;"><span id="demo2"></span>/<span id="demo"></span><span id="demo3"></span></span> -->
+
+                <img src="images/cube.png" title="Cube" style="position:absolute; left:500px; top:250px;">
+
+                <span id="sizec1" style="position:absolute; left:515px; top:330px;"></span>
+
+                <span id="sizec2" style="position:absolute; left:550px; top:415px;"></span>
+                
+                
+                
+
+            </div>
+             
+            <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 40px; left:735px; top:440px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton2" onClick="navNext2()"  />
+
+<span id="cubedatehidden" style="visibility: hidden; position: absolute; left: 570px; top: 260px; transform: rotateX(50deg);font-size: 1.8em; font-weight: bold;"><span id="demo2"></span>/<span id="demo"></span><span id="demo3"></span></span>                
+
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton2" onClick="navBack2()" src="Back.png" /--->
+
+        </div>
+
+ 
+
+        <!-- Step 3 -->
+
+
+
+        <div class="simsubscreen" id="canvas3" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;3&nbsp;</span>
+
+            <span style="position: absolute; left:80px; top: 30px; visibility: "><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on the specimens to take them out of the curing tank.</span><br><br>
+			<span id="step3b" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on the cloth to wipe off the surface water on the specimens.</span><br><br>
+
+
+            <img src="images/curingtankccopy.png" height="350px" style="position:absolute; left:25px; top:180px;" title="Curing Tank" />
+
+           <!--Blinking Arrowcube1  -->
+            <span class="blink_me" id="arrowcube1" style="position:absolute; font-size: 45px; left:190px; top:170px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/cubetank.png" id="cubefromtank1" style="position:absolute; left:175px; top:225px;" title="Cube" onclick="" />
+
+<span id="cubedatehidden2" style="visibility: hidden; position: absolute; left: 192px; top: 230px; transform: rotateX(50deg); font-size: 1.1em; font-weight: bold;"><span id="demotank2"></span>/<span id="demotank1"></span><span id="demo3"></span></span>
+             <img src="images/transbox.png" id="cubefromtanktb1" style="position:absolute; left:175px; top:225px; height: 75px; visibility: hidden; border: 0px solid red;" title="Cube" onclick="movecube()" />
+
+            <img src="images/watereff.png" style="position:absolute; left:170px; top:285px;" />
+
+            <img src="images/cubetankwat.png" style="position:absolute; left:230px; top:265px;" />
+
+            <img src="images/cubetankwat.png" style="position:absolute; left:125px; top:265px;" />
+
+            <!--Blinking Arrowcube2  -->
+            <span class="blink_me" id="arrowcube2" style="position:absolute; font-size: 40px; left:145px; top:270px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/cubetank.png" id="cubefromtank2" style="position:absolute; left:125px; top:315px;" title="Cube" onclick="" />
+
+<span id="cubedatehidden3" style="visibility: hidden; position: absolute; left: 145px; top: 320px; transform: rotateX(50deg); font-size: 1.1em; font-weight: bold;"><span id="demotank12"></span>/<span id="demotank11"></span></span>
+            <img src="images/transbox.png" id="cubefromtanktb2" style="position:absolute; left:125px; top:315px;height: 75px; visibility: hidden; border: 0px solid red;" title="Cube" onclick="mcurcube1()" />
+
+            <!--Blinking Arrowcube3  -->
+            <span class="blink_me" id="arrowcube3" style="position:absolute; font-size: 40px; left:250px; top:260px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/cubetank.png" id="cubefromtank3" style="position:absolute; left:235px; top:305px;" title="Cube" onclick="" />
+
+<span id="cubedatehidden4" style="visibility: hidden; position: absolute; left: 252px; top: 311px; transform: rotateX(50deg); font-size: 1.1em; font-weight: bold;"><span id="demotank22"></span>/<span id="demotank21"></span></span>
+            <img src="images/transbox.png" id="cubefromtanktb3" style="position:absolute; left:235px; top:305px; height: 75px; visibility: hidden; border: 0px solid red;" title="Cube" onclick="mcurcube2()" />
+
+            <img src="images/tankupcopy.png" height="178px" style="position:absolute; left:25px; top:345px;" title="Curing Tank" />
+            
+
+            <!--Blinking Arrowcube4  -->
+            <span class="blink_me" id="arrowcube4" style="position:absolute; font-size: 40px; left:528px; top:435px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <img src="images/cloth.png" id="clothforcube" style="position:absolute; left:390px; top:375px; visibility: hidden;" title="Cloth" onclick="movecloth()" />
+
+            <!--Blinking arrowcuringnext  -->
+            <span class="blink_me" id="arrowcuringnext" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>    
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton3" onclick="navNext3()" />
+
+                    
+
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton3" onClick="navBack3()" src="Back.png" /--->
+
+        </div>
+
+
+<!-- For Specimen 1 -->
+
+        <!-- Step 4 -->
+
+
+
+        <div class="simsubscreen" id="canvas4" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;4&nbsp;</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 1&nbsp;</center></span>
+
+            <span style="position: absolute; left:80px; top: 35px; visibility: ;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Clean the bearing surfaces of the CTM before positioning of the specimens.</span><br><br><!-- Click on Cube to move and again Cilck to Rotate it. Click Cube to Fit in the machine.-->
+			<span id="step4b" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Place the specimen in the CTM. Cube specimens shall be compressed perpendicularly to the direction of casting.</span><br><br>
+           <!--- <span id="cubedatehidden1" style="visibility: hidden; position: relative;"><span id="demo02"></span>/<span id="demo01"></span></span>--->
+
+            
+            <img src="images/imgfullcopy.png" height="400px" style="position:absolute; left:300px; top:80px;"/>
+            
+            <img src="images/cubeclear.png" id="cubefromctm" style="position:absolute; left:45px; top:385px;" onclick="" /> 
+            
+            <img src="images/transbox.png" id="cubefromctm_tb" style="position:absolute; left:45px; top:385px; height: 75px; border: 0px solid red;" title="Cube" onclick="movecube1()" />
+            <!--Blinking Arrow1  -->
+            <span class="blink_me" id="arrow1" style="position:absolute; font-size: 40px; left:65px; top:335px; color: ;"><strong><i class="fa fa-arrow-down"></i></strong></span>   
+            
+            <img src="images/cubeclear.png" id="cuberotate" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="" /> 
+
+            <span id="cubedatehidden5" style="visibility: hidden; position: absolute; left: 62px; top: 390px; transform: rotateX(50deg); font-size: 1.1em; font-weight: bold;"><span id="demotank32"></span>/<span id="demotank31"></span></span>
+
+            <img src="images/transbox.png" id="cuberotate_tb" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="movecube2()" />
+
+            <img src="images/fitmachine.png" id="cubechangectm" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden6" style="visibility: hidden; position: absolute; left: 55px; top: 230px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank42"></span>/<span id="demotank41"></span></span>
+
+            <img src="images/transbox.png" id="cubechangectm_tb" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="movecube3()" />
+
+            <!--Blinking Arrow2  -->
+            <span class="blink_me" id="arrow2" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+            <!--Blinking Arrow3  -->
+            <span class="blink_me" id="arrow3" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <!--Blinking fitcubenext  -->
+            <span class="blink_me" id="fitcubenext" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton4" onclick="navNext4()" />
+
+                    
+
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+
+        <!-- Step 5 -->
+
+
+
+        <div class="simsubscreen" id="canvas5" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;5&nbsp;</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 1&nbsp;</center></span>
+
+            <span style="position: absolute; left:80px; top: 35px; visibility: "><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on CTM panel to enter the rate of loading.</span><br><br>
+
+           <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+           <img src="images/fitmachine.png" height="55px" id="" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+           <span id="cubedatehidden7" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank52"></span>/<span id="demotank51"></span></span> 
+            <!--Blinking Arrow4-->
+            <span class="blink_me" id="arrow4" style="position:absolute; font-size: 40px; left:350px; top:390px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>  
+
+            <img src="images/transbox.png" height="70px" id="transnumbox1" style="position:absolute; left:270px; top:385px; cursor:pointer;" title="Cube" onclick="movecube4()" /> 
+
+            <img src="images/PAD.png" height="210px" style="position:absolute; left:386px; top:262px; visibility: hidden;" title="Cube" onclick="" />
+
+<div id="numpadbig" style="position:absolute; left:386px; top:140px; visibility: hidden;">
+    <div style="padding-left: 15px; padding-right: 15px">
+    <input type="text" id="quantity" size="8" style="font-size: 20px; height: 30px;"> KN<br><br>
+    </div>
+    <div style="background-color: #FFF;  height: 190px; width: 135px; border: 8px #000 solid;">
+    
+    <table style="position: absolute; left: 20px; top: 65px; text-align: center; ">
+<tr style="">
+    <td>
+        <input type="button" value="1" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="2" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="3" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+</tr>
+<tr>
+    <td style="">
+        <input type="Button" value="4" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="5" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="6" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="7" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="8" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="9" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="." style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 10px; padding-right: 10px" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="0" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantity').value =document.getElementById('quantity').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="c" style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 7px; padding-right: 7px" onclick="document.getElementById('quantity').value = ''">
+    </td>
+</tr>
+
+</table>
+</div>
+<div style="padding-left: 20%; padding-right: 20%; padding-top: 10%">
+    <input type="Button" value="Submit" onclick="tunnu()" style="font-size:16px; background-color: #2150a0; color: #FFF;">
+</div>
+    
+</div>
+        <!--Blinking Arrow5-->
+            <span class="blink_me" id="arrow5" style="position:absolute; font-size: 40px; left:730px; top:430px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+
+    <span id="numoutnext" style="position: absolute; left: 570px; top: 200px; color: red"></span>
+        
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton5" onclick="navNext5()"  />
+<!---
+            <img style="position:absolute; left:730px; top:480px; cursor:pointer;" id="nextButton4" onClick="navNext5()" src="Next.png" />
+
+                    
+
+            <---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+       <!-- Scene 6 -->
+
+<div class="simsubscreen" id="canvas6" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;6&nbsp;</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 1&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 1: Click on the dial of CTM for zoomed view.</span>
+
+            <span id="startstep" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 2: Click Start button of CTM to initiate the test.</span>
+
+            <span id="stopstep" style="position: absolute; left:80px; top: 90px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 3: Click Stop Button to see Values</span>
+
+            <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+            <!----Pressure image---->
+            <span id="press1" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <span id="press2" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <!----Pressure cube---->
+            <img src="images/brekleft.png" height="55px" id="crekl" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+            
+            <img src="images/brekright.png" height="55px" id="crekr" style="position:absolute; left:108px; top:282px;" title="Cube" onclick="" />
+           
+             <!--img src="brek.png" height="55px" id="crekcube" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />--->
+
+            <img src="images/brektime.png" height="55px" id="okcube" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden8" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank62"></span>/<span id="demotank61"></span></span>
+            <!--img src="imgfullwithcube.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" /--->
+
+            <!--Blinking Arrow6 -->
+            <span class="blink_me" id="arrow6" style="position:absolute; font-size: 40px; left:350px; top:250px; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transcircle.png" id="bigc1" height="70px" style="position:absolute; left:270px; top:238px; cursor:pointer; border-radius: 50%; visibility: hidden;" title="Cube" onclick="showbigclk()" />
+            
+            <img src="images/clockno.png" height="220px" id="bigclock" style="position:absolute; left:480px; top:120px; visibility: hidden;" title="" />
+
+            <img src="images/pin2.png" id="pin1" style="position:absolute; left:587px; top:160px; visibility: hidden; transform-origin: bottom center; transform: rotate(-130deg); transition: smooth 0.5s;" />
+
+            <img src="images/pin3.png" id="pin2" style="position:absolute; left:587px; top:178px; visibility: hidden; transform-origin: bottom center; transform: rotate(-135deg);" />
+
+            <img src="images/dot.png" id="clkdot" style="position:absolute; left:583px; top:221px; visibility: hidden;"/>
+            <!--Blinking Arrow7 -->
+            <span class="blink_me" id="arrow7" style="position:absolute; font-size: 25px; left:255px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-right'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="strtbtn" style="height:10px; position:absolute; left:285px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden;" onclick="showmoveclk()">
+            <!--Blinking Arrow8 -->
+            <span class="blink_me" id="arrow8" style="position:absolute; font-size: 25px; left:335px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="stopbtn" style="height:10px; position:absolute; left:317px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden; border: 1px solid red;" onclick="stopmoveclk()">
+            
+            <table border="0" id="clktable" style="position:absolute; left:453px; top:371px; visibility: hidden;">
+                <tr>
+                    <td><strong>Load at failure:</strong></td>
+                    <td width="50px" align="center"><span id="loadfail"></span></td>
+                    <td>KN</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Time:</strong></td>
+                    <td width="50px" align="center"><span id="value" style=""></span></td>
+                    <td>sec.</td>
+                </tr>
+            </table>
+
+            <span id="lfstep" style="position:absolute; left:300px; top:500px; visibility: hidden;">Click Next to Repeat test for other two specimen.</span>            
+            
+            <!--Blinking Arrow9 -->
+            <span class="blink_me" id="arrow9" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton6" onclick="navNext6()"  />
+
+
+</div>
+
+<!-- For Specimen 2 -->
+
+        <!-- Step 4 -->
+
+
+
+        <div class="simsubscreen" id="canvas4a" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;7&nbsp;</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 2&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px; visibility: ;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Clean the bearing surfaces of the CTM before positioning of the specimens.</span><br><br><!-- Click on Cube to move and again Cilck to Rotate it. Click Cube to Fit in the machine.-->
+            <span id="step4bs2" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Place the specimen in the CTM. Cube specimens shall be compressed perpendicularly to the direction of casting.</span><br><br>
+           <!--- <span id="cubedatehidden1" style="visibility: hidden; position: relative;"><span id="demo02"></span>/<span id="demo01"></span></span>--->
+
+            
+            <img src="images/imgfullcopy.png" height="400px" style="position:absolute; left:300px; top:80px;"/>
+            
+            <img src="images/cubeclear.png" id="cubefromctms2" style="position:absolute; left:45px; top:385px;" onclick="" /> 
+            
+            <img src="images/transbox.png" id="cubefromctm_tbs2" style="position:absolute; left:45px; top:385px; height: 75px; border: 0px solid red;" title="Cube" onclick="movecube11()" />
+            <!--Blinking Arrow1  -->
+            <span class="blink_me" id="arrow1s2" style="position:absolute; font-size: 40px; left:65px; top:335px; color: ;"><strong><i class="fa fa-arrow-down"></i></strong></span>   
+            
+            <img src="images/cubeclear.png" id="cuberotates2" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="" /> 
+
+            <span id="cubedatehidden9" style="visibility: hidden; position: absolute; left: 62px; top: 390px; transform: rotateX(50deg); font-size: 1.1em; font-weight: bold;"><span id="demotank72"></span>/<span id="demotank71"></span></span>
+
+            <img src="images/transbox.png" id="cuberotate_tbs2" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="movecube22()" />
+
+            <img src="images/fitmachine.png" id="cubechangectms2" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden10" style="visibility: hidden; position: absolute; left: 55px; top: 230px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank82"></span>/<span id="demotank81"></span></span>
+
+            <img src="images/transbox.png" id="cubechangectm_tbs2" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="movecube33()" />
+
+            <!--Blinking Arrow2  -->
+            <span class="blink_me" id="arrow2s2" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+            <!--Blinking Arrow3  -->
+            <span class="blink_me" id="arrow3s2" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <!--Blinking fitcubenext  -->
+            <span class="blink_me" id="fitcubenexts2" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton4s2" onclick="navNext4a()" />
+
+                    
+
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+
+        <!-- Step 5 -->
+
+
+
+        <div class="simsubscreen" id="canvas5a" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;8&nbsp;</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 2&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px; visibility: "><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on CTM panel to enter the rate of loading.</span><br><br>
+
+           <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+           <img src="images/fitmachine.png" height="55px" id="" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+           <span id="cubedatehidden11" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank112"></span>/<span id="demotank111"></span></span> 
+            <!--Blinking Arrow4-->
+            <span class="blink_me" id="arrow4s2" style="position:absolute; font-size: 40px; left:350px; top:390px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>  
+
+            <img src="images/transbox.png" height="70px" id="transnumbox1" style="position:absolute; left:270px; top:385px; cursor:pointer;" title="Cube" onclick="movecube44()" /> 
+
+            <img src="images/PAD.png" height="210px" style="position:absolute; left:386px; top:262px; visibility: hidden;" title="Cube" onclick="" />
+
+<div id="numpadbigs2" style="position:absolute; left:386px; top:140px; visibility: hidden;">
+    <div style="padding-left: 15px; padding-right: 15px">
+    <input type="text" id="quantitys2" size="8" style="font-size: 20px; height: 30px;"> KN<br><br>
+    </div>
+    <div style="background-color: #FFF;  height: 190px; width: 135px; border: 8px #000 solid;">
+    
+    <table style="position: absolute; left: 20px; top: 65px; text-align: center; ">
+<tr style="">
+    <td>
+        <input type="button" value="1" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="2" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="3" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+</tr>
+<tr>
+    <td style="">
+        <input type="Button" value="4" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="5" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="6" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="7" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="8" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="9" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="." style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 10px; padding-right: 10px" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="0" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys2').value =document.getElementById('quantitys2').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="c" style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 7px; padding-right: 7px" onclick="document.getElementById('quantitys2').value = ''">
+    </td>
+</tr>
+
+</table>
+</div>
+<div style="padding-left: 20%; padding-right: 20%; padding-top: 10%">
+    <input type="Button" value="Submit" onclick="tunnu2()" style="font-size:16px; background-color: #2150a0; color: #FFF;">
+</div>
+    
+</div>
+        <!--Blinking Arrow5-->
+            <span class="blink_me" id="arrow5s2" style="position:absolute; font-size: 40px; left:730px; top:430px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+
+    <span id="numoutnexts2" style="position: absolute; left: 570px; top: 200px; color: red"></span>
+        
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton5s2" onclick="navNext5a()"  />
+<!---
+            <img style="position:absolute; left:730px; top:480px; cursor:pointer;" id="nextButton4" onClick="navNext5()" src="Next.png" />
+
+                    
+
+            <---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+       <!-- Scene 6 -->
+
+<div class="simsubscreen" id="canvas6a" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">&nbsp;9&nbsp;</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 2&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 1: Click on the dial of CTM for zoomed view.</span>
+
+            <span id="startsteps2" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 2: Click Start button of CTM to initiate the test.</span>
+
+            <span id="stopsteps2" style="position: absolute; left:80px; top: 90px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 3: Click Stop Button to see Values</span>
+
+            <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+            <!----Pressure image---->
+            <span id="press1s2" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <span id="press2s2" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <!----Pressure cube---->
+            <img src="images/brekleft.png" height="55px" id="crekls2" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+            
+            <img src="images/brekright.png" height="55px" id="crekrs2" style="position:absolute; left:108px; top:282px;" title="Cube" onclick="" />
+           
+             <!--img src="brek.png" height="55px" id="crekcube" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />--->
+
+            <img src="images/brektime.png" height="55px" id="okcubes2" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden12" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank122"></span>/<span id="demotank121"></span></span>
+            <!--img src="imgfullwithcube.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" /--->
+
+            <!--Blinking Arrow6 -->
+            <span class="blink_me" id="arrow6s2" style="position:absolute; font-size: 40px; left:350px; top:250px; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transcircle.png" id="bigc2" height="70px" style="position:absolute; left:270px; top:238px; cursor:pointer; border-radius: 50%; visibility: hidden;" title="Cube" onclick="showbigclk2()" />
+            
+            <img src="images/clockno.png" height="220px" id="bigclocks2" style="position:absolute; left:480px; top:120px; visibility: hidden;" title="" />
+
+            <img src="images/pin2.png" id="pin1s2" style="position:absolute; left:587px; top:160px; visibility: hidden; transform-origin: bottom center; transform: rotate(-130deg); transition: smooth 0.5s;" />
+
+            <img src="images/pin3.png" id="pin2s2" style="position:absolute; left:587px; top:178px; visibility: hidden; transform-origin: bottom center; transform: rotate(-135deg);" />
+
+            <img src="images/dot.png" id="clkdots2" style="position:absolute; left:583px; top:221px; visibility: hidden;"/>
+            <!--Blinking Arrow7 -->
+            <span class="blink_me" id="arrow7s2" style="position:absolute; font-size: 25px; left:255px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-right'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="strtbtns2" style="height:10px; position:absolute; left:285px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden;" onclick="showmoveclk2()">
+            <!--Blinking Arrow8 -->
+            <span class="blink_me" id="arrow8s2" style="position:absolute; font-size: 25px; left:335px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="stopbtns2" style="height:10px; position:absolute; left:317px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden; border: 1px solid red;" onclick="stopmoveclk2()">
+            
+            <table border="0" id="clktables2" style="position:absolute; left:453px; top:371px; visibility: hidden;">
+                <tr>
+                    <td><strong>Load at failure:</strong></td>
+                    <td width="50px" align="center"><span id="loadfails2"></span></td>
+                    <td>KN</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Time:</strong></td>
+                    <td width="50px" align="center"><span id="values2" style=""></span></td>
+                    <td>sec.</td>
+                </tr>
+            </table>
+
+            <span id="lfsteps2" style="position:absolute; left:300px; top:500px; visibility: hidden;">Click Next to Repeat test for third specimen.</span>            
+            
+            <!--Blinking Arrow9 -->
+            <span class="blink_me" id="arrow9s2" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton6s2" onclick="navNext6a()"  />
+
+
+</div>
+
+<!-- For Specimen 3 -->
+
+        <!-- Step 4 -->
+
+
+
+        <div class="simsubscreen" id="canvas4b" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">10</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 3&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px; visibility: ;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Clean the bearing surfaces of the CTM before positioning of the specimens.</span><br><br><!-- Click on Cube to move and again Cilck to Rotate it. Click Cube to Fit in the machine.-->
+            <span id="step4bs3" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Place the specimen in the CTM. Cube specimens shall be compressed perpendicularly to the direction of casting.</span><br><br>
+           <!--- <span id="cubedatehidden1" style="visibility: hidden; position: relative;"><span id="demo02"></span>/<span id="demo01"></span></span>--->
+
+            
+            <img src="images/imgfullcopy.png" height="400px" style="position:absolute; left:300px; top:80px;"/>
+            
+            <img src="images/cubeclear.png" id="cubefromctms3" style="position:absolute; left:45px; top:385px;" onclick="" /> 
+            
+            <img src="images/transbox.png" id="cubefromctm_tbs3" style="position:absolute; left:45px; top:385px; height: 75px; border: 0px solid red;" title="Cube" onclick="movecube111()" />
+            <!--Blinking Arrow1  -->
+            <span class="blink_me" id="arrow1s3" style="position:absolute; font-size: 40px; left:65px; top:335px; color: ;"><strong><i class="fa fa-arrow-down"></i></strong></span>   
+            
+            <img src="images/cubeclear.png" id="cuberotates3" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="" /> 
+
+            <span id="cubedatehidden13" style="visibility: hidden; position: absolute; left: 62px; top: 390px; transform: rotateX(50deg); font-size: 1.1em; font-weight: bold;"><span id="demotank132"></span>/<span id="demotank131"></span></span>
+
+            <img src="images/transbox.png" id="cuberotate_tbs3" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="movecube222()" />
+
+            <img src="images/fitmachine.png" id="cubechangectms3" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden14" style="visibility: hidden; position: absolute; left: 55px; top: 230px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank142"></span>/<span id="demotank141"></span></span>
+
+            <img src="images/transbox.png" id="cubechangectm_tbs3" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="movecube333()" />
+
+            <!--Blinking Arrow2  -->
+            <span class="blink_me" id="arrow2s3" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+            <!--Blinking Arrow3  -->
+            <span class="blink_me" id="arrow3s3" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <!--Blinking fitcubenext  -->
+            <span class="blink_me" id="fitcubenexts3" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton4s3" onclick="navNext4b()" />
+
+                    
+
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+
+        <!-- Step 5 -->
+
+
+
+        <div class="simsubscreen" id="canvas5b" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">11</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 3&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px; visibility: "><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on CTM panel to enter the rate of loading.</span><br><br>
+
+           <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+           <img src="images/fitmachine.png" height="55px" id="" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+           <span id="cubedatehidden15" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank152"></span>/<span id="demotank151"></span></span> 
+            <!--Blinking Arrow4-->
+            <span class="blink_me" id="arrow4s3" style="position:absolute; font-size: 40px; left:350px; top:390px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>  
+
+            <img src="images/transbox.png" height="70px" id="transnumbox1" style="position:absolute; left:270px; top:385px; cursor:pointer;" title="Cube" onclick="movecube444()" /> 
+
+            <img src="images/PAD.png" height="210px" style="position:absolute; left:386px; top:262px; visibility: hidden;" title="Cube" onclick="" />
+
+<div id="numpadbigs3" style="position:absolute; left:386px; top:140px; visibility: hidden;">
+    <div style="padding-left: 15px; padding-right: 15px">
+    <input type="text" id="quantitys3" size="8" style="font-size: 20px; height: 30px;"> KN<br><br>
+    </div>
+    <div style="background-color: #FFF;  height: 190px; width: 135px; border: 8px #000 solid;">
+    
+    <table style="position: absolute; left: 20px; top: 65px; text-align: center; ">
+<tr style="">
+    <td>
+        <input type="button" value="1" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="2" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="3" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+</tr>
+<tr>
+    <td style="">
+        <input type="Button" value="4" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="5" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="6" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="7" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="8" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="9" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="." style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 10px; padding-right: 10px" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="0" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys3').value =document.getElementById('quantitys3').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="c" style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 7px; padding-right: 7px" onclick="document.getElementById('quantitys3').value = ''">
+    </td>
+</tr>
+
+</table>
+</div>
+<div style="padding-left: 20%; padding-right: 20%; padding-top: 10%">
+    <input type="Button" value="Submit" onclick="tunnu3()" style="font-size:16px; background-color: #2150a0; color: #FFF;">
+</div>
+    
+</div>
+        <!--Blinking Arrow5-->
+            <span class="blink_me" id="arrow5s3" style="position:absolute; font-size: 40px; left:730px; top:430px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+
+    <span id="numoutnexts3" style="position: absolute; left: 570px; top: 200px; color: red"></span>
+        
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton5s3" onclick="navNext5b()"  />
+<!---
+            <img style="position:absolute; left:730px; top:480px; cursor:pointer;" id="nextButton4" onClick="navNext5()" src="Next.png" />
+
+                    
+
+            <---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+       <!-- Scene 6 -->
+
+<div class="simsubscreen" id="canvas6b" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">12</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 3&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 1: Click on the dial of CTM for zoomed view.</span>
+
+            <span id="startsteps3" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 2: Click Start button of CTM to initiate the test.</span>
+
+            <span id="stopsteps3" style="position: absolute; left:80px; top: 90px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 3: Click Stop Button to see Values</span>
+
+            <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+            <!----Pressure image---->
+            <span id="press1s3" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <span id="press2s3" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <!----Pressure cube---->
+            <img src="images/brekleft.png" height="55px" id="crekls3" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+            
+            <img src="images/brekright.png" height="55px" id="crekrs3" style="position:absolute; left:108px; top:282px;" title="Cube" onclick="" />
+           
+             <!--img src="brek.png" height="55px" id="crekcube" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />--->
+
+            <img src="images/brektime.png" height="55px" id="okcubes3" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden16" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank162"></span>/<span id="demotank161"></span></span>
+            <!--img src="imgfullwithcube.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" /--->
+
+            <!--Blinking Arrow6 -->
+            <span class="blink_me" id="arrow6s3" style="position:absolute; font-size: 40px; left:350px; top:250px; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transcircle.png" id="bigc3" height="70px" style="position:absolute; left:270px; top:238px; cursor:pointer; border-radius: 50%; visibility: hidden;" title="Cube" onclick="showbigclk3()" />
+            
+            <img src="images/clockno.png" height="220px" id="bigclocks3" style="position:absolute; left:480px; top:120px; visibility: hidden;" title="" />
+
+            <img src="images/pin2.png" id="pin1s3" style="position:absolute; left:587px; top:160px; visibility: hidden; transform-origin: bottom center; transform: rotate(-130deg); transition: smooth 0.5s;" />
+
+            <img src="images/pin3.png" id="pin2s3" style="position:absolute; left:587px; top:178px; visibility: hidden; transform-origin: bottom center; transform: rotate(-135deg);" />
+
+            <img src="images/dot.png" id="clkdots3" style="position:absolute; left:583px; top:221px; visibility: hidden;"/>
+            <!--Blinking Arrow7 -->
+            <span class="blink_me" id="arrow7s3" style="position:absolute; font-size: 25px; left:255px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-right'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="strtbtns3" style="height:10px; position:absolute; left:285px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden;" onclick="showmoveclk3()">
+            <!--Blinking Arrow8 -->
+            <span class="blink_me" id="arrow8s3" style="position:absolute; font-size: 25px; left:335px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="stopbtns3" style="height:10px; position:absolute; left:317px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden; border: 1px solid red;" onclick="stopmoveclk3()">
+            
+            <table border="0" id="clktables3" style="position:absolute; left:453px; top:371px; visibility: hidden;">
+                <tr>
+                    <td><strong>Load at failure:</strong></td>
+                    <td width="50px" align="center"><span id="loadfails3"></span></td>
+                    <td>KN</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Time:</strong></td>
+                    <td width="50px" align="center"><span id="values3" style=""></span></td>
+                    <td>sec.</td>
+                </tr>
+            </table>
+
+            <span id="lfsteps3" style="position:absolute; left:300px; top:500px; visibility: hidden;">Click Next to Repeat test for third specimen.</span>            
+            
+            <!--Blinking Arrow9 -->
+            <span class="blink_me" id="arrow9s3" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton6s3" onclick="navNext6b()"  />
+
+
+</div>
+
+
+<!--
+++++++++++++++++++++++++
+++++++++++++++++++++++++
+++++++++++++++++++++++++
+++++++++++++++++++++++++
+-->
+       <!-- Scene 7 -->
+
+<div class="simsubscreen" id="canvas7" style="visibility: hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">13</span>
+
+            <span style="position: absolute; left:80px; top: 30px;"><strong>Observations:</strong></span>
+
+            <span id="startstep" style="position: absolute; left:80px; top: 60px;">Click the show button to see the observations for all the three specimens.</span>              
+
+            <input class="incanvas" type="button" name="Submit" value="Show" style="position: absolute; left: 530px; top: 45px; width: 120px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="ShowLF()"/>
+            <br>
+            <table style="width: 730px; position: absolute; left: 25px; right: 25px; top: 130px; text-align: center; border: 1px solid #000;">
+                <!---<tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="width: 120px;"></td>
+                    <td style="width: 150px; border: 1px solid #000; border-right-color: #FFF; border-left-color: #FFF;">Compressive Stress at Failure(f<sub>c</sub>)</td>
+                    <td style="width: 150px;">fca <strong>&#8330; &#8725; &#8331;</strong> 0.15 fca</td>
+                    <td style="width: 240px; border: 1px solid #000; border-left-color: #FFF; ">Check: fc &#8331; 0.15 fca &#60; fc &#60; fc &#8330; 0.15 fca </td>
+                </tr>
+            <table border="0" width="600px" style="position: absolute; left: 50px; top: 130px; text-align: center;">---->
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td colspan="3" style="padding: 10px">Load at failure of Specimens (F)</td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; width: 240px;"><strong>Specimen 1</strong></td>
+                    <td style="width: 250px;border: 1px solid #000;">Failure Load:</td>
+                    <td style="width: 240px;"><span id="lf1"></span></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px"><strong>Specimen 2</strong></td>
+                    <td style="border: 1px solid #000;">Failure Load:</td>
+                    <td><span id="lf2"></span></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px"><strong>Specimen 3</strong></td>
+                    <td style="border: 1px solid #000;">Failure Load:</td>
+                    <td><span id="lf3"></span></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align: justify-all; background-color: #000; color: #FFF; padding: 10px">Compressive stress at failure (f<sub>c</sub> = F/A<sub>c</sub>)</td>
+                </tr>
+            
+            
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px"><strong>Specimen 1</strong></td>
+                    <td colspan="2" style="border: 1px solid #000;"><span id="csf1"></span> MPa(N/mm<sup>2</sup>)</td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px"><strong>Specimen 2</strong></td>
+                    <td colspan="2" style="border: 1px solid #000;"><span id="csf2"></span> MPa(N/mm<sup>2</sup>)</td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px"><strong>Specimen 3</strong></td>
+                    <td colspan="2" style="border: 1px solid #000;"><span id="csf3"></span> MPa(N/mm<sup>2</sup>)</td>
+                </tr>
+            </tbody>
+            </table>
+                       
+            <!--Blinking Arrow10 -->
+            <span class="blink_me" id="arrow10" style="position:absolute; font-size: 40px; left:730px; top:430px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton7" onclick="navNext7()"  />
+
+
+</div>            
+        
+        <!-- Scene 8 -->
+
+<div class="simsubscreen" id="canvas8" style="visibility: hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">14</span>
+
+            <span style="position: absolute; left:80px; top: 30px;"><strong>Results:</strong></span>
+
+            <span id="startstep" style="position: absolute; left:80px; top: 60px;">Click view button to see the results.</span>
+
+            <input class="incanvas" type="button" name="Submit" value="View" style="position: absolute; left: 520px; top: 65px; width: 120px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="ShowLoadRes()"/>
+            <br>
+            <table style="width: 730px; position: absolute; left: 25px; right: 25px; top: 130px; text-align: center; border: 1px solid #000;">
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="width: 120px;"></td>
+                    <td style="width: 150px; border: 1px solid #000; border-right-color: #FFF; border-left-color: #FFF;">Compressive Stress at Failure(f<sub>c</sub>)</td>
+                    <td style="width: 150px;">fca <strong>&#177;<!--&#8723; &#8330; &#8725; &#8331;--></strong> 0.15 fca</td>
+                    <td style="width: 240px; border: 1px solid #000; border-left-color: #FFF; ">Check: fc &#8722; 0.15 fca &#60; fc &#60; fc &#43; 0.15 fca </td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 15px;"><strong>Specimen 1</strong></td>
+                    <td style="border: 1px solid #000;"><span id="csft1"></span></td>
+                    <td rowspan="3" style="vertical-align: middle; border: 1px solid #000;"><span id="csft4"></span></td>
+                    <td style="border: 1px solid #000;"><span id="csft5"></span></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 15px"><strong>Specimen 2</strong></td>
+                    <td style="border: 1px solid #000;"><span id="csft2"></span></td>
+                    <td style="border: 1px solid #000;"><span id="csft6"></span></td>
+                    
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 15px"><strong>Specimen 3</strong></td>
+                    <td style="border: 1px solid #000;"><span id="csft3"></span></td>
+                    <td style="border: 1px solid #000;"><span id="csft7"></span></td>
+                    
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 15px"><strong>Average, fca</strong></td>
+                    <td style="border: 1px solid #000;"><span id="avg1"></span></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    
+                    <td style="padding: 15px; text-align: right;" colspan="3">Result : Average Compressive Strangth =</td>
+                    <td style="border: 1px solid #000; color: red; font-weight: bold;"><span id="csfres1"></span></td>
+                </tr>
+            </tbody>
+            </table> 
+
+<span id="rlfstep" style="position:absolute; left:300px; top:500px; visibility: hidden;">Click Next to Repeat Test with Specimen 3.</span>
+            
+            <!--Blinking Arrow11 -->
+            <span class="blink_me" id="arrow11" style="position:absolute; font-size: 40px; left:730px; top:430px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton8" onclick="navNext8()"  />
+
+
+</div>
+
+<!-- For Specimen 3* -->
+
+        <!-- Step 4 -->
+
+
+
+        <div class="simsubscreen" id="canvas4c" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">15</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 3*&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px; visibility: ;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Clean the bearing surfaces of the CTM before positioning of the specimens.</span><br><br><!-- Click on Cube to move and again Cilck to Rotate it. Click Cube to Fit in the machine.-->
+            <span id="step4bs4" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Place the specimen in the CTM. Cube specimens shall be compressed perpendicularly to the direction of casting.</span><br><br>
+           <!--- <span id="cubedatehidden1" style="visibility: hidden; position: relative;"><span id="demo02"></span>/<span id="demo01"></span></span>--->
+
+            
+            <img src="images/imgfullcopy.png" height="400px" style="position:absolute; left:300px; top:80px;"/>
+            
+            <img src="images/cubeclear.png" id="cubefromctms4" style="position:absolute; left:45px; top:385px;" onclick="" /> 
+            
+            <img src="images/transbox.png" id="cubefromctm_tbs4" style="position:absolute; left:45px; top:385px; height: 75px; border: 0px solid red;" title="Cube" onclick="movecube1114()" />
+            <!--Blinking Arrow1  -->
+            <span class="blink_me" id="arrow1s4" style="position:absolute; font-size: 40px; left:65px; top:335px; color: ;"><strong><i class="fa fa-arrow-down"></i></strong></span>   
+            
+            <img src="images/cubeclear.png" id="cuberotates4" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="" /> 
+
+            <span id="cubedatehidden17" style="visibility: hidden; position: absolute; left: 62px; top: 390px; transform: rotateX(50deg); font-size: 1.1em; font-weight: bold;"><span id="demotank172"></span>/<span id="demotank171"></span></span>
+
+            <img src="images/transbox.png" id="cuberotate_tbs4" style="position:absolute; left:45px; top:210px; visibility: hidden;" title="Cube" onclick="movecube2224()" />
+
+            <img src="images/fitmachine.png" id="cubechangectms4" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden18" style="visibility: hidden; position: absolute; left: 55px; top: 230px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank182"></span>/<span id="demotank181"></span></span>
+
+            <img src="images/transbox.png" id="cubechangectm_tbs4" style="position:absolute; left:45px; top:210px; visibility: hidden; height: 65px;" title="Cube" onclick="movecube3334()" />
+
+            <!--Blinking Arrow2  -->
+            <span class="blink_me" id="arrow2s4" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+            <!--Blinking Arrow3  -->
+            <span class="blink_me" id="arrow3s4" style="position:absolute; font-size: 35px; left:9px; top:220px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <!--Blinking fitcubenext  -->
+            <span class="blink_me" id="fitcubenexts4" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton4s4" onclick="navNext4c()" />
+
+                    
+
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+
+        <!-- Step 5 -->
+
+
+
+        <div class="simsubscreen" id="canvas5c" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">16</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 3*&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px; visibility: "><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on CTM panel to enter the rate of loading.</span><br><br>
+
+           <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+           <img src="images/fitmachine.png" height="55px" id="" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+           <span id="cubedatehidden19" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank192"></span>/<span id="demotank191"></span></span> 
+            <!--Blinking Arrow4-->
+            <span class="blink_me" id="arrow4s4" style="position:absolute; font-size: 40px; left:350px; top:390px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>  
+
+            <img src="images/transbox.png" height="70px" id="transnumbox1" style="position:absolute; left:270px; top:385px; cursor:pointer;" title="Cube" onclick="movecube4444()" /> 
+
+            <img src="images/PAD.png" height="210px" style="position:absolute; left:386px; top:262px; visibility: hidden;" title="Cube" onclick="" />
+
+<div id="numpadbigs4" style="position:absolute; left:386px; top:140px; visibility: hidden;">
+    <div style="padding-left: 15px; padding-right: 15px">
+    <input type="text" id="quantitys4" size="8" style="font-size: 20px; height: 30px;"> KN<br><br>
+    </div>
+    <div style="background-color: #FFF;  height: 190px; width: 135px; border: 8px #000 solid;">
+    
+    <table style="position: absolute; left: 20px; top: 65px; text-align: center; ">
+<tr style="">
+    <td>
+        <input type="button" value="1" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="2" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="3" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+</tr>
+<tr>
+    <td style="">
+        <input type="Button" value="4" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="5" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="6" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="7" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="8" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="9" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+</tr>
+<tr style="">
+    <td>
+        <input type="Button" value="." style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 10px; padding-right: 10px" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="0" style="font-size:25px; border-radius: 5px; background-color: #FFF" onclick = "document.getElementById('quantitys4').value =document.getElementById('quantitys4').value+ this.value">
+    </td>
+    <td>
+        <input type="Button" value="c" style="font-size:25px; border-radius: 5px; background-color: #FFF; padding-left: 7px; padding-right: 7px" onclick="document.getElementById('quantitys4').value = ''">
+    </td>
+</tr>
+
+</table>
+</div>
+<div style="padding-left: 20%; padding-right: 20%; padding-top: 10%">
+    <input type="Button" value="Submit" onclick="tunnu4()" style="font-size:16px; background-color: #2150a0; color: #FFF;">
+</div>
+    
+</div>
+        <!--Blinking Arrow5-->
+            <span class="blink_me" id="arrow5s4" style="position:absolute; font-size: 40px; left:730px; top:430px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+
+    <span id="numoutnexts4" style="position: absolute; left: 570px; top: 200px; color: red"></span>
+        
+
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton5s4" onclick="navNext5c()"  />
+<!---
+            <img style="position:absolute; left:730px; top:480px; cursor:pointer;" id="nextButton4" onClick="navNext5()" src="Next.png" />
+
+                    
+
+            <---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton4" onClick="navBack4()" src="Back.png" /--->
+
+        </div>
+
+       <!-- Scene 6 -->
+
+<div class="simsubscreen" id="canvas6c" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">17</span>
+
+            <span style="position: absolute; left: 325px; top: 1px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 150px;"><center>&nbsp;Specimen 3*&nbsp;</center></span>
+            
+            <span style="position: absolute; left:80px; top: 35px;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 1: Click on the dial of CTM for zoomed view.</span>
+
+            <span id="startsteps4" style="position: absolute; left:80px; top: 60px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 2: Click Start button of CTM to initiate the test.</span>
+
+            <span id="stopsteps4" style="position: absolute; left:80px; top: 90px; visibility: hidden;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Step 3: Click Stop Button to see Values</span>
+
+            <img src="images/imgfullcopy.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" />
+
+            <!----Pressure image---->
+            <span id="press1s4" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:36px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <span id="press2s4" style="visibility: hidden;">
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:282px;" title="Cube" onclick="" />
+
+            <img src="images/pressure.gif" height="30px" style="position:absolute; left:170px; top:312px; transform: rotate(180deg);" title="Cube" onclick="" />
+            </span>
+            <!----Pressure cube---->
+            <img src="images/brekleft.png" height="55px" id="crekls4" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+            
+            <img src="images/brekright.png" height="55px" id="crekrs4" style="position:absolute; left:108px; top:282px;" title="Cube" onclick="" />
+           
+             <!--img src="brek.png" height="55px" id="crekcube" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />--->
+
+            <img src="images/brektime.png" height="55px" id="okcubes4" style="position:absolute; left:86px; top:282px;" title="Cube" onclick="" />
+
+            <span id="cubedatehidden20" style="visibility: hidden; position: absolute; left: 90px; top: 298px; transform: rotateX(50deg); font-size: 1.3em; font-weight: bold;"><span id="demotank202"></span>/<span id="demotank201"></span></span>
+            <!--img src="imgfullwithcube.png" height="320px" style="position:absolute; left:30px; top:180px;" title="CTM" /--->
+
+            <!--Blinking Arrow6 -->
+            <span class="blink_me" id="arrow6s4" style="position:absolute; font-size: 40px; left:350px; top:250px; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transcircle.png" id="bigc4" height="70px" style="position:absolute; left:270px; top:238px; cursor:pointer; border-radius: 50%; visibility: hidden;" title="Cube" onclick="showbigclk4()" />
+            
+            <img src="images/clockno.png" height="220px" id="bigclocks4" style="position:absolute; left:480px; top:120px; visibility: hidden;" title="" />
+
+            <img src="images/pin2.png" id="pin1s4" style="position:absolute; left:587px; top:160px; visibility: hidden; transform-origin: bottom center; transform: rotate(-130deg); transition: smooth 0.5s;" />
+
+            <img src="images/pin3.png" id="pin2s4" style="position:absolute; left:587px; top:178px; visibility: hidden; transform-origin: bottom center; transform: rotate(-135deg);" />
+
+            <img src="images/dot.png" id="clkdots4" style="position:absolute; left:583px; top:221px; visibility: hidden;"/>
+            <!--Blinking Arrow7 -->
+            <span class="blink_me" id="arrow7s4" style="position:absolute; font-size: 25px; left:255px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-right'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="strtbtns4" style="height:10px; position:absolute; left:285px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden;" onclick="showmoveclk4()">
+            <!--Blinking Arrow8 -->
+            <span class="blink_me" id="arrow8s4" style="position:absolute; font-size: 25px; left:335px; top:335px; color: ; visibility: hidden;"><strong><i class='fa fa-arrow-left'></i></strong></span>
+
+            <img src="images/transsmallcircle.png" id="stopbtns4" style="height:10px; position:absolute; left:317px; top:348px; cursor:pointer; border-radius: 50%; visibility: hidden; border: 1px solid red;" onclick="stopmoveclk4()">
+            
+            <table border="0" id="clktables4" style="position:absolute; left:453px; top:371px; visibility: hidden;">
+                <tr>
+                    <td><strong>Load at failure:</strong></td>
+                    <td width="50px" align="center"><span id="loadfails4"></span></td>
+                    <td>KN</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Time:</strong></td>
+                    <td width="50px" align="center"><span id="values4" style=""></span></td>
+                    <td>sec.</td>
+                </tr>
+            </table>
+
+            <span id="lfsteps4" style="position:absolute; left:300px; top:500px; visibility: hidden;">Click Next to Repeat test for third specimen.</span>            
+            
+            <!--Blinking Arrow9 -->
+            <span class="blink_me" id="arrow9s4" style="position:absolute; font-size: 40px; left:730px; top:430px; visibility: hidden;"><strong><i class='fa fa-arrow-down'></i></strong></span>
+            <img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton6s4" onclick="navNext6c()"  />
+
+
+</div>
+<!-- 
++++++++++++++++++++++++++++++++
+-------------------------------
+_______________________________
+------------------------------- -->
+<!-- Scene 9 -->
+
+<div class="simsubscreen" id="canvas9" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">18</span>
+
+            <span style="position: absolute; left:80px; top: 30px;"><strong>Final Results:</strong></span> 
+                        
+            <span style="position: absolute; left:80px; top: 60px;">Click View button to see Results for new specimen</span>              
+
+            <input class="incanvas" type="button" name="Submit" value="View" style="position: absolute; left: 530px; top: 65px; width: 120px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="ShowLFinalRes()"/>
+            <br>
+           <!-- <table width="90%" style="position: absolute; left: 25px; right: 25px; top: 130px; text-align: center; border: 1px solid #000;">
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="width: 120px;"></td>
+                    <td style="width: 150px; border: 1px solid #000; border-right-color: #FFF; border-left-color: #FFF;">Compressive Stress at Failure(f<sub>c</sub>)</td>
+                    <td style="width: 150px;">f<sub>c</sub>a <span>&#43;</span><span>&#8725;</span>
+<span>&#8722;</span> 0.15 fca</td>
+                    <td style="width: 220px; border: 1px solid #000; border-left-color: #FFF; ">Check: fc-0.15 fca&lt;fc&lt;fc+0.15 fca </td>
+                </tr>
+                <tr style="text-align: left; border: 1px solid #000;">
+                    <td style="padding: 15px"></td>
+                    <td style="width: 300px;">Compressive Stress at Failure(f<sub>c</sub>)</td>
+                    <td style="width: 100px;">fca +/- 0.15 fca</td>
+                    <td style="width: 250px;">Check: fc-0.15 fca&lt;fc&lt;fc+0.15 fca </td>
+                </tr>--->
+                <table style="width: 730px; position: absolute; left: 25px; right: 25px; top: 130px; text-align: center; border: 1px solid #000;">
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="width: 120px;"></td>
+                    <td style="width: 150px; border: 1px solid #000; border-right-color: #FFF; border-left-color: #FFF;">Compressive Stress at Failure(f<sub>c</sub>)</td>
+                    <td style="width: 150px;">fca <strong>&#8330; &#8725; &#8331;</strong> 0.15 fca</td>
+                    <td style="width: 240px; border: 1px solid #000; border-left-color: #FFF; ">Check: fc &#8331; 0.15 fca &#60; fc &#60; fc &#8330; 0.15 fca </td>
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 15px; width: 170px;"><strong>Specimen 1</strong></td>
+                    <td style="border: 1px solid #000;"><span id="fcsft1"></span></td>
+                    <td rowspan="3" style="vertical-align: middle; border: 1px solid #000;"><span id="fcsft4"></span></td>
+                    <td style="border: 1px solid #000;"><span id="fcsft5"></span></td>
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 15px"><strong>Specimen 2</strong></td>
+                    <td style="border: 1px solid #000;"><span id="fcsft2"></span></td>
+                    <td style="border: 1px solid #000;"><span id="fcsft6"></span></td>
+                    
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 15px"><strong>Specimen 3*</strong></td>
+                    <td style="border: 1px solid #000;"><span id="fcsft3"></span></td>
+                    <td style="border: 1px solid #000;"><span id="fcsft7"></span></td>
+                    
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 15px"><strong>Average, fca</strong></td>
+                    <td style="border: 1px solid #000;"><span id="avg2"></span></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    
+                    <td style="padding: 15px; text-align: right;" colspan="3">Result : Average Compressive Strangth =</td>
+                    <td style="border: 1px solid #000; color: red; font-weight: bold;"><span id="csfres2"></span></td>
+                </tr>
+            </tbody>
+            </table> 
+
+<span id="flfstep" style="position:absolute; left:300px; top:500px; visibility: hidden;">Click Next to Generate Report.</span>
+            
+
+<!------            <p class="incanvas" style="font-size:15px;"><strong>Objective:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">To determine the compressive strength of hardened concrete specimen (cube) as per IS-516.</p></br>
+
+            <p class="incanvas" style="font-size:15px;"><strong>Apparatus used:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">Compressive Strength Testing Machine</p></br>
+
+            <img src="images/ctm.jpg" style="position:absolute; left:50px; top:200px;" title="CTM" />
+
+            <img src="images/man.png" style="position:absolute; left:422px; top:130px;" height="370px" title="Man" />
+
+            <p style="font-size:18px; text-align: center; position:absolute; left:570px; top:225px;"><strong>Specimen Type<br><br>Cube</strong></p>
+------->
+<img src="images/Next.png" style="position:absolute; left:730px; top:480px; cursor:pointer; visibility: hidden;" id="nextButton9" onClick="navNext9()"  />
+            
+
+</div>
+
+
+<!-- Scene 10 -->
+
+        <div class="simsubscreen" id="canvas10" style="visibility:hidden;"></br>
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 48px;">19</span><br><br>
+
+            <span style="position:absolute; left:85px; top:60px; font-size: 1em;"><strong>Report</strong></span>
+            
+            <span style="position:absolute; left:85px; top:90px;">Size of specimen= <span style="font-weight: bold;" id="sos1"></span></span>
+            <span style="position:absolute; left:85px; top:120px;">Date of Specimen= <span id="cubedatehiddenrep" style="visibility: hidden; font-weight: bold;"><span id="demorep2"></span>/<span id="demorep"></span>/<span id="demorep3"></span></span></span>
+
+
+
+            <input class="incanvas" type="button" name="Submit" value="Show" style="position: absolute; left: 600px; top: 115px; width: 120px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="Showrep()"/>
+
+            <!-- <table border="1px #000 solid" style="position:absolute; left:25px; top:180px; text-align: center; width: 740px; font-size: 12px"> -->
+            <table border="1" style="width: 730px; position: absolute; left: 25px; right: 25px; top: 190px; text-align: center; border: 1px solid #000;">
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="width: 120px; border-right-color: #FFF;">No.</td>
+                    <!-- <td>Identification mark</td> -->
+                    <td style="width: 100px; border-right-color: #FFF;">Age in days</td>
+                    <td style="width: 100px; border-right-color: #FFF;">Date of testing</td>
+                    <!-- <td>Maximum load</td> -->
+                    <td style="width: 100px; border-right-color: #FFF;">Load at failure (KN):</td>
+                    <td style="width: 150px; border-right-color: #FFF;">Compressive Stress at Failure(f<sub>c</sub>)</td>                    
+                    <td style="width: 120px; border-right-color: #FFF;">Avg. value MPa(N/mm<sup>2</sup>)</td>
+                    <td style="width: 120px;">Result</td>             
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 10px">Specimen 1</td>
+                    <!-- <td><span id="im1"></span></td> -->
+                    <td><span id="ad1"></span></td>
+                    <td><span id="td1"></span></td>
+                    <!-- <td><span id="ml1"></span></td> -->
+                    <td><span id="ft1"></span></td>
+                    <td><span id="v1"></span></td>
+                    
+                    <td><span id="av1"></span></td>
+                    <td><span id="fs1" style="color: #2150a0;"></span></td>
+
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 10px">Specimen 2</td>
+                    <!-- <td><span id="im2"></span></td> -->
+                    <td><span id="ad2"></span></td>
+                    <td><span id="td2"></span></td>
+                    <!-- <td><span id="ml2"></span></td> -->
+                    <td><span id="ft2"></span></td>
+                    <td><span id="v2"></span></td>
+                    
+                    <td><span id="av2"></span></td>
+                    <td><span id="fs2" style="color: #2150a0;"></span></td>
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 10px">Specimen 3</td>
+                    <!-- <td><span id="im3"></span></td> -->
+                    <td><span id="ad3"></span></td>
+                    <td><span id="td3"></span></td>
+                    <!-- <td><span id="ml3"></span></td> -->
+                    <td><span id="ft3"></span></td>
+                    <td><span id="v3"></span></td>
+                    
+                    <td><span id="av3"></span></td>
+                    <td><span id="fs3" style="color: #CC0000;"></span></td>
+                </tr>
+                <tr style="border: 1px solid #000; color: #000;">
+                    <td style="padding: 10px">Specimen 3*</td>
+                    <!-- <td><span id="im3"></span></td> -->
+                    <td><span id="ad4"></span></td>
+                    <td><span id="td4"></span></td>
+                    <!-- <td><span id="ml4"></span></td> -->
+                    <td><span id="ft4"></span></td>
+                    <td><span id="v4"></span></td>
+                    
+                    <td><span id="av4"></span></td>
+                    <td><span id="fs4" style="color: #2150a0;"></span></td>
+                </tr>
+                </tbody>               
+            </table>
+<!------
+            <p class="incanvas" style="font-size:15px;"><strong>Objective:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">To determine the compressive strength of hardened concrete specimen (cube) as per IS-516.</p></br>
+
+            <p class="incanvas" style="font-size:15px;"><strong>Apparatus used:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">Compressive Strength Testing Machine</p></br>
+
+            <img src="images/ctm.jpg" style="position:absolute; left:50px; top:200px;" title="CTM" />
+
+            <img src="images/man.png" style="position:absolute; left:422px; top:130px;" height="370px" title="Man" />
+
+            <p style="font-size:18px; text-align: center; position:absolute; left:570px; top:225px;"><strong>Specimen Type<br><br>Cube</strong></p>
+----------->
+            <input type="button" id="resetbtnlast" style="position:absolute; left: 670px; top: 490px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; visibility: hidden; color: #FFF;" value="&nbsp;Restart&nbsp;" onclick="reset()"/>
+
+        </div>
+
+        <!-- Scene 9 -->
+<!------
+        <div class="simsubscreen" id="canvas9" style="visibility:hidden;"></br>
+
+            <strong class="incanvas">STEP</strong>
+
+            <span class="circlebg">&nbsp;9&nbsp;</span>
+
+            <p class="incanvas" style="font-size:15px;"><strong>Objective:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">To determine the compressive strength of hardened concrete specimen (cube) as per IS-516.</p></br>
+
+            <p class="incanvas" style="font-size:15px;"><strong>Apparatus used:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">Compressive Strength Testing Machine</p></br>
+
+            <img src="images/ctm.jpg" style="position:absolute; left:50px; top:200px;" title="CTM" />
+
+            <img src="images/man.png" style="position:absolute; left:422px; top:130px;" height="370px" title="Man" />
+
+            <p style="font-size:18px; text-align: center; position:absolute; left:570px; top:225px;"><strong>Specimen Type<br><br>Cube</strong></p>
+
+            <input type="button" id="nextButton7" style="position:absolute; left:610px; top:320px; cursor:pointer; font-size: 15px; background-color: #CC0; padding-top: 5px; padding-bottom: 5px" value="&nbsp;Start Here&nbsp;" onclick="navNext7()"/>
+
+        </div>
+------->        
+
+    </div><!--- First Div---->
+<!-----
+<div style="text-align: center; font-size: 11px; width:800px; border:1px solid #000; position: relative; border-top:none; color: #FFF; background-color: #000;">Developed by @ <a href="#" ><strong style="color: #FFF; font-size: 12px;">Virtuality India Pvt.Ltd</strong></a></div>---->
+
+        </td>
+    </tr>
+</table>
+
 </body>
+<!---i class="fa fa-arrow-right" style="color: #82C91E"></i>
+<i class="fa fa-arrow-left" style="color: #82C91E"></i>
+<i class="fa fa-arrow-down" style="color: #82C91E"></i>
+<i class="fa fa-arrow-up" style="color: #82C91E"></i>
+<i class="fa fa-chevron-circle-right" style="color: #82C91E"></i>
+<i class="fas fa-hand-point-right" style="color: #82C91E"></i--->
 </html>
+
+
+

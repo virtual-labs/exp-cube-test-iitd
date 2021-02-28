@@ -89,22 +89,59 @@
 
 
     const myQuestions = [{
-            question: "1.This is a sample question:", ///// Write the question inside double quotes
+            question: "1. The compressive strength of 100 mm cube as compared to 150 mm cube is always:", ///// Write the question inside double quotes
             answers: {
-                a: "This is a sample answer A", ///// Write the option 1 inside double quotes
-                b: "This is a sample answer B", ///// Write the option 2 inside double quotes
+                a: "Less", ///// Write the option 1 inside double quotes
+                b: "More", ///// Write the option 2 inside double quotes
+                c: "Equal", ///// Write the option 1 inside double quotes
+                d: "Can be less or more", ///// Write the option 2 inside double quotes
+            },
+            correctAnswer: "b" ///// Write the correct option inside double quotes
+        },
+
+        {
+            question: "2. The strength of concrete after one year as compared to 28 days strength is", ///// Write the question inside double quotes
+            answers: {
+                a: "Less", ///// Write the option 1 inside double quotes
+                b: "More", ///// Write the option 2 inside double quotes
+                c: "Equal", ///// Write the option 1 inside double quotes
+                d: "Can be less or more", ///// Write the option 2 inside double quotes
+            },
+            correctAnswer: "b" ///// Write the correct option inside double quotes
+        },
+
+        {
+            question: "3. Under pure uniaxial compression loading, the failure cracks that appear in a cube specimen should be", ///// Write the question inside double quotes
+            answers: {
+                a: "along the surface parallel to the direction of applied load", ///// Write the option 1 inside double quotes
+                b: "along the surface perpendicular to the direction of applied load", ///// Write the option 2 inside double quotes
+                c: "along the diagonals of the cube", ///// Write the option 1 inside double quotes
+                d: "randomly distributed", ///// Write the option 2 inside double quotes
             },
             correctAnswer: "a" ///// Write the correct option inside double quotes
         },
 
-    {
-      question: "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",  ///// Write the question inside double quotes
-      answers: {
-        a: "<img src='images/1b.png'>",                  ///// Write the option 1 inside double quotes
-        b: "<img src='images/1a.png'>",                  ///// Write the option 2 inside double quotes
-        c: "<img src='images/1c.PNG'>",      },
-      correctAnswer: "c"                ///// Write the correct option inside double quotes
-    },
+        {
+            question: "4. During compressive strength of cube test, under uniaxial compression loading including platens effect, the failure cracks that appear in a cube specimen are", ///// Write the question inside double quotes
+            answers: {
+                a: "along the surface parallel to the direction of applied load", ///// Write the option 1 inside double quotes
+                b: "along the surface perpendicular to the direction of applied load", ///// Write the option 2 inside double quotes
+                c: "along the diagonals of the cube", ///// Write the option 1 inside double quotes
+                d: "randomly distributed", ///// Write the option 2 inside double quotes
+            },
+            correctAnswer: "c" ///// Write the correct option inside double quotes
+        },
+
+         
+
+    // {
+    //   question: "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",  ///// Write the question inside double quotes
+    //   answers: {
+    //     a: "<img src='images/1b.png'>",                  ///// Write the option 1 inside double quotes
+    //     b: "<img src='images/1a.png'>",                  ///// Write the option 2 inside double quotes
+    //     c: "<img src='images/1c.PNG'>",      },
+    //   correctAnswer: "c"                ///// Write the correct option inside double quotes
+    // },
 
 
         
