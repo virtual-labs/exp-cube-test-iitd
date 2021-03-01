@@ -2,7 +2,7 @@
 
 Concrete as a material is valued for its compressive strength. Of all the properties of hardened concrete, compressive strength is the most important. Compressive strength of concrete is required for assuring the design strength. It is also used to obtain an estimate of flexural strength and elastic modulus by means of established relationships.<br>
 
-<img src="images/t1.png"/>
+<img src="images/t1.png" height="60px"/>
 
 When a uniaxial load is applied upon a concrete specimen, it not only exhibits compressive strain in the direction of load, it also would exhibit some expansion in the lateral directions due to poisons effect, as manifested by the introduction of lateral tensile strain.<br>
 A specimen tested in the compression testing machine is restrained from lateral expansion at its ends where it is compressed against the relatively stiff steel platen of the testing machine. This is equivalent to the introduction of some lateral radial compressive stresses in the specimen near the specimen steel platen interface due to interface shear stresses. Thus, near the interface, the concrete is subjected to multiaxial compressive stresses. This effect is called platen effect. The strength of a material is greater under multiaxial compressive stresses than under uniaxial compressive stress.<br>
@@ -19,7 +19,7 @@ The measured value of strength of concrete specimen is affected by rate of loadi
 | Ruler | 	0.2 mm |
 | Weighing device | 1 g |
 
-<img src="images/t2.png"/>
+<img src="images/t2.png" height="400px"/>
 
 Figure Compression Testing Machine<br><br>
 
