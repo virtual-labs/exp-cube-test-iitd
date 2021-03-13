@@ -1,5 +1,4 @@
-# Theory
-
+### Introduction
 Concrete as a material is valued for its compressive strength. Of all the properties of hardened concrete, compressive strength is the most important. Compressive strength of concrete is required for assuring the design strength. It is also used to obtain an estimate of flexural strength and elastic modulus by means of established relationships.<br>
 
 <img src="images/t1.png" height="60px"/>
@@ -9,7 +8,7 @@ A specimen tested in the compression testing machine is restrained from lateral 
 The platen effect decreases away from the interface towards the center of the specimen. The effect is practically negligible beyond a section at a distance equal to the width of the specimen from the interface. Thus, the measured compressive strength decreases with increase in the height/lateral dimension ratio and is approximately equal to uniaxial compressive strength of concrete for values of this ratio equal to or greater than 2. For standard cylinders, this ratio is two and as such concrete cylinder strength is only about 0.80 times the cube strength whole height/lateral dimension is one. The platen effect can be eliminated by eliminating the interface shear stresses by applying lubricant such as grease at the interface, as this may allow the specimen to expand freely by removing the lateral compressive stress. But such a method may not result in consistent measurement and is not favored by standards.
 The measured value of strength of concrete specimen is affected by rate of loading. It is low when the rate of loading is low. For the purpose of uniformity and meaningful comparison between different test results, the rate of loading has been specified as 14 MPa/min.<br>
 
-## Apparatus:
+### Apparatus:
 
 | Name | Accuracy/Least count |
 | ------ | ------ |
