@@ -1,0 +1,64 @@
+[{
+	"question": "1. Which Indian Standard (IS) code is adopted for determination of the strength of hardened concrete.",
+	"answers": {
+		"a": "IS 456",
+		"b": "IS 10262",
+		"c": "IS 516",
+		"d": "IS 1199"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "2. Out of the following which apparatus is required for the determination of the strength of hardened concrete?",
+	"answers": {
+		"a": "CTM",
+		"b": "UTM",
+		"c": "VICAT",
+		"d": "LE CHATLIER"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "3. What are the recognized ages of the test specimen at the time of the test (in days)?",
+	"answers": {
+		"a": "1,7,28,56,90",
+		"b": "1,7,20,56,90",
+		"c": "1,7,28,50,90",
+		"d": "1,7,28,56,97"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "4. What is the recognized shape and dimension of the cube specimen at the time of the test. In mm.",
+	"answers": {
+		"a": "100X100 OR 150X150",
+		"b": "150X200",
+		"c": "200X200",
+		"d": "150X250"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "5. Select the minimum number of the specimen to be tested at the time of the test.",
+	"answers": {
+		"a": "4",
+		"b": "3",
+		"c": "5",
+		"d": "6"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "6. What is the rate of loading for a 150mm specimen in KN /sec?",
+	"answers": {
+		"a": "5.25",
+		"b": "2.33",
+		"c": "4.66",
+		"d": "5.75"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "7. How to calculate the compressive strength of the specimen?",
+	"answers": {
+		"a": "peak load / cross-sectional area",
+		"b": "peak strain / cross-sectional area",
+		"c": "peak stress / cross-sectional area",
+		"d": "volume / cross-sectional area"
+	},
+	"correctAnswer": "a"
+}]
