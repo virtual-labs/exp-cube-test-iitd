@@ -1,1 +1,37 @@
-[{"question":"1. The compressive strength of 100 mm cube as compared to 150 mm cube is always:","answers":{"a":"Less","b":"More","c":"Equal","d":"Can be less or more"},"correctAnswer":"b"},{"question":"2. The strength of concrete after one year as compared to 28 days strength is","answers":{"a":"Less","b":"More","c":"Equal","d":"Can be less or more"},"correctAnswer":"b"},{"question":"3. Under pure uniaxial compression loading, the failure cracks that appear in a cube specimen should be","answers":{"a":"along the surface parallel to the direction of applied load","b":"along the surface perpendicular to the direction of applied load","c":"along the diagonals of the cube","d":"randomly distributed"},"correctAnswer":"a"},{"question":"4. During compressive strength of cube test, under uniaxial compression loading including platens effect, the failure cracks that appear in a cube specimen are","answers":{"a":"along the surface parallel to the direction of applied load","b":"along the surface perpendicular to the direction of applied load","c":"along the diagonals of the cube","d":"randomly distributed"},"correctAnswer":"c"}]
+[{
+	"question": "1. The compressive strength of 100 mm cube as compared to 150 mm cube is always:",
+	"answers": {
+		"a": "Less",
+		"b": "More",
+		"c": "Equal",
+		"d": "Can be less or more"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "2. The strength of concrete after one year as compared to 28 days strength is",
+	"answers": {
+		"a": "Less",
+		"b": "More",
+		"c": "Equal",
+		"d": "Can be less or more"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "3. Under pure uniaxial compression loading, the failure cracks that appear in a cube specimen should be",
+	"answers": {
+		"a": "along the surface parallel to the direction of applied load",
+		"b": "along the surface perpendicular to the direction of applied load",
+		"c": "along the diagonals of the cube",
+		"d": "randomly distributed"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "4. During compressive strength of cube test, under uniaxial compression loading including platens effect, the failure cracks that appear in a cube specimen are",
+	"answers": {
+		"a": "along the surface parallel to the direction of applied load",
+		"b": "along the surface perpendicular to the direction of applied load",
+		"c": "along the diagonals of the cube",
+		"d": "randomly distributed"
+	},
+	"correctAnswer": "c"
+}]
