@@ -14,14 +14,14 @@ The length of thespecimen shall be taken to the nearest 0.2 mm.
 
 **Positioning**
 
-The bearing surfaces of the testing machine and of theloading strips shall be wiped clean before positioning the specimen.
+The bearing surfaces of the testing machine and of the loading strips shall be wiped clean before positioning the specimen.
 
 Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly to the direction of casting.
 
 
 **Rate of Loading**
 
-The load shall be applied without shock and increasedcontinuously at a nominal rate of14 MPa/min.
+The load shall be applied without shock and increased continuously at a nominal rate of 14 MPa/min.
 
 
 **Failure load**
@@ -45,11 +45,13 @@ Figure. Unsatisfactory failure of cube specimen<br><br>
 
 
 **Observations and Calculation:**
+
 Average of three values shall be taken as the representative of the batch provided the individualvariation is not more than Â± 15 percent of the average.<br>
 Otherwise repeat test shall be made,however if there is no further sample then the average of two closest values may be taken as the average result.<br>
 The compressive strength shall be expressed to the nearest 0.5 MPa.<br><br>
 For _____________-day strength:<br>
 Shape of specimen:  ______________<br>
+
 <table>
                  <tr>
                                 <td>
@@ -74,7 +76,7 @@ Shape of specimen:  ______________<br>
                                          Compressive Strength(N/mm<sup>2</sup>) f<sub>c</sub> = Fu/Ac
                                 </td>
                                  <td>
-                                         Check 0.85f<sub>ca</sub> â‰¤ fc â‰¤ 1.15fca
+                                         Check 0.85f<sub>ca</sub> ≤ fc ≤ 1.15fca
                                 </td>
                  </tr>
                  <tr>
