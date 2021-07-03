@@ -2,31 +2,31 @@
 
 **Preparation of specimens:**
 
-Specimens when received dry shall be kept in water for 24 h before they are taken for testing. Specimen shall be tested immediately on removal from the water whilst they are still wet. Surface water and grit shall be wiped off the specimens and any projecting fins removed from the surfaces which are to be in contact with the packing strips.
+1. Specimens when received dry shall be kept in water for 24 h before they are taken for testing. Specimen shall be tested immediately on removal from the water whilst they are still wet. Surface water and grit shall be wiped off the specimens and any projecting fins removed from the surfaces which are to be in contact with the packing strips.
 
 
 **Measurement**
 
-The mass and dimensions of the specimen shall be noted before testing.
+2. The mass and dimensions of the specimen shall be noted before testing.
 
-The length of thespecimen shall be taken to the nearest 0.2 mm.
+3. The length of thespecimen shall be taken to the nearest 0.2 mm.
 
 
 **Positioning**
 
-The bearing surfaces of the testing machine and of the loading strips shall be wiped clean before positioning the specimen.
+4. The bearing surfaces of the testing machine and of the loading strips shall be wiped clean before positioning the specimen.
 
-Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly to the direction of casting.
+5. Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly to the direction of casting.
 
 
 **Rate of Loading**
 
-The load shall be applied without shock and increased continuously at a nominal rate of 14 MPa/min.
+6. The load shall be applied without shock and increased continuously at a nominal rate of 14 MPa/min.
 
 
 **Failure load**
 
-The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.
+7. The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.
 
 
 **Assessment of type of failure**
