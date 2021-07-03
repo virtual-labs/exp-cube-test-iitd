@@ -155,14 +155,18 @@ Shape of specimen:  ______________<br>
                                 </td>
                  </tr>
 </table>
-**Results:** <br>
+
+**Results:**
+
 Date of test:   ____________________<br>
 Shape and size of the specimen in mm:   ____________________<br>
 Age of specimen at date of test:    ____________________<br>
 Weight of specimen in Newtons:  ____________________<br>
 Average Compressive strength:   ____________________<br>
 Type of failure (satisfactory or unsatisfactory):   ____________________<br><br>
+
 **Precautions**
+
 1. Damaged specimens shall not be tested.<br>
 2. The time between the extraction of the specimen from the curing tank until the test shall be as short as possible or not more than 2h.<br>
 3. Cube specimens shall be compressed perpendicularly to the direction of casting.<br>
