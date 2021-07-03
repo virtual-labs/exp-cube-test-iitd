@@ -1,18 +1,36 @@
 ### These steps will be followed for the experiment
 
 **Preparation of specimens:**
-1. Specimens when received dry shall be kept in water for 24 h before they are taken for testing. Specimen shall be tested immediately on removal from the water whilst they are still wet. Surface water and grit shall be wiped off the specimens and any projecting fins removed from the surfaces which are to be in contact with the packing strips.<br><br>
+
+Specimens when received dry shall be kept in water for 24 h before they are taken for testing. Specimen shall be tested immediately on removal from the water whilst they are still wet. Surface water and grit shall be wiped off the specimens and any projecting fins removed from the surfaces which are to be in contact with the packing strips.<br><br>
+
+
 **Measurement**
-2. The mass and dimensions of the specimen shall be noted before testing. <br>
-3. The length of thespecimen shall be taken to the nearest 0.2 mm.<br><br>
+
+The mass and dimensions of the specimen shall be noted before testing.
+
+The length of thespecimen shall be taken to the nearest 0.2 mm.
+
+
 **Positioning**
-4. The bearing surfaces of the testing machine and of theloading strips shall be wiped clean before positioning the specimen.<br>
-5. Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly to the direction of casting.<br><br>
+
+The bearing surfaces of the testing machine and of theloading strips shall be wiped clean before positioning the specimen.
+
+Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly to the direction of casting.
+
+
 **Rate of Loading**
-6. The load shall be applied without shock and increasedcontinuously at a nominal rate of14 MPa/min.<br><br>
+
+The load shall be applied without shock and increasedcontinuously at a nominal rate of14 MPa/min.<br><br>
+
+
 **Failure load**
-7. The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.<br><br>
+
+The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.<br><br>
+
+
 **Assessment of type of failure**
+
 If the failure for cube/cylinder specimens is satisfactory or unsatisfactory as shown in the following figures, this fact shall be recorded.<br>
 If the failure pattern is unsatisfactory, then the type of failure recorded using the pattern number as shown in the following figures closest to that observed shall be indicated.<br><br>
 <img src="images/p1.png"/>
