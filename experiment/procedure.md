@@ -2,7 +2,7 @@
 
 **Preparation of specimens:**
 
-Specimens when received dry shall be kept in water for 24 h before they are taken for testing. Specimen shall be tested immediately on removal from the water whilst they are still wet. Surface water and grit shall be wiped off the specimens and any projecting fins removed from the surfaces which are to be in contact with the packing strips.<br><br>
+Specimens when received dry shall be kept in water for 24 h before they are taken for testing. Specimen shall be tested immediately on removal from the water whilst they are still wet. Surface water and grit shall be wiped off the specimens and any projecting fins removed from the surfaces which are to be in contact with the packing strips.
 
 
 **Measurement**
@@ -21,22 +21,29 @@ Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly
 
 **Rate of Loading**
 
-The load shall be applied without shock and increasedcontinuously at a nominal rate of14 MPa/min.<br><br>
+The load shall be applied without shock and increasedcontinuously at a nominal rate of14 MPa/min.
 
 
 **Failure load**
 
-The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.<br><br>
+The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.
 
 
 **Assessment of type of failure**
 
-If the failure for cube/cylinder specimens is satisfactory or unsatisfactory as shown in the following figures, this fact shall be recorded.<br>
-If the failure pattern is unsatisfactory, then the type of failure recorded using the pattern number as shown in the following figures closest to that observed shall be indicated.<br><br>
+If the failure for cube/cylinder specimens is satisfactory or unsatisfactory as shown in the following figures, this fact shall be recorded.
+
+If the failure pattern is unsatisfactory, then the type of failure recorded using the pattern number as shown in the following figures closest to that observed shall be indicated.
+<br>
 <img src="images/p1.png"/>
-Figure. Satisfactory failure of cube specimen<br><br>
+<br>
+Figure. Satisfactory failure of cube specimen
+<br><br>
 <img src="images/p2.png"/>
+<br>
 Figure. Unsatisfactory failure of cube specimen<br><br>
+
+
 **Observations and Calculation:**
 Average of three values shall be taken as the representative of the batch provided the individualvariation is not more than Â± 15 percent of the average.<br>
 Otherwise repeat test shall be made,however if there is no further sample then the average of two closest values may be taken as the average result.<br>
