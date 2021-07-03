@@ -76,7 +76,7 @@ Shape of specimen:  ______________<br>
                                          Compressive Strength(N/mm<sup>2</sup>) f<sub>c</sub> = Fu/Ac
                                 </td>
                                  <td>
-                                         Check 0.85f<sub>ca</sub> ≤ fc ≤ 1.15fca
+                                         Check 0.85 f<sub>ca</sub>≤fc≤1.15fca
                                 </td>
                  </tr>
                  <tr>
@@ -149,7 +149,7 @@ Shape of specimen:  ______________<br>
                  </tr>
                  <tr>
                                 <td colspan= 6>
-                                         *Corrected Average, fca(if there is no further sample)
+                                         *Corrected Average, fca (if there is no further sample)
                                 </td>
                                  <td>
                                 </td>
