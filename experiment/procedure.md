@@ -9,7 +9,7 @@
 
 2. The mass and dimensions of the specimen shall be noted before testing.
 
-3. The length of thespecimen shall be taken to the nearest 0.2 mm.
+3. The length of the specimen shall be taken to the nearest 0.2 mm.
 
 
 **Positioning**
@@ -26,7 +26,7 @@
 
 **Failure load**
 
-7. The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.
+7. The maximum load applied shall then be recorded. The appearance of concrete and any unusual features in the type of failure shall also be noted.
 
 
 **Assessment of type of failure**
@@ -46,8 +46,8 @@ Figure. Unsatisfactory failure of cube specimen<br><br>
 
 **Observations and Calculation:**
 
-Average of three values shall be taken as the representative of the batch provided the individualvariation is not more than Â± 15 percent of the average.<br>
-Otherwise repeat test shall be made,however if there is no further sample then the average of two closest values may be taken as the average result.<br>
+Average of three values shall be taken as the representative of the batch provided the individual variation is not more than Â± 15 percent of the average.<br>
+Otherwise repeat test shall be made, however if there is no further sample then the average of two closest values may be taken as the average result.<br>
 The compressive strength shall be expressed to the nearest 0.5 MPa.<br><br>
 For _____________-day strength:<br>
 Shape of specimen:  ______________<br>
@@ -93,7 +93,7 @@ Shape of specimen:  ______________<br>
                                 </td>
                                  <td>
                                 </td>
-                               <td>
+                                 <td>
                                 </td>
                                  <td>
                                 </td>
@@ -117,7 +117,7 @@ Shape of specimen:  ______________<br>
                                  <td>
                                 </td>
                  </tr>
-                <tr>
+                 <tr>
                                 <td>
                                          3
                                 </td>
