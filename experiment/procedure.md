@@ -161,10 +161,15 @@ Shape of specimen:  ______________<br>
 **Results:**
 
 Date of test:   ____________________<br>
+
 Shape and size of the specimen in mm:   ____________________<br>
+
 Age of specimen at date of test:    ____________________<br>
+
 Weight of specimen in Newtons:  ____________________<br>
+
 Average Compressive strength:   ____________________<br>
+
 Type of failure (satisfactory or unsatisfactory):   ____________________<br><br>
 
 **Precautions**
