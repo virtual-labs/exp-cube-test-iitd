@@ -64,19 +64,19 @@ Shape of specimen:  ______________<br>
                                          Breadth/Diameter (mm), B/D
                                 </td>
                                  <td>
-                                         Cross section area (mm<sup>2</sup>), Ac
+                                         Cross section area (mm<sup>2</sup>), A<sub>c</sub>
                                 </td>
                                  <td>
                                          Failure (Satisfactory / unsatisfactory)
                                 </td>
                                  <td>
-                                         Load at Failure (N), Fu
+                                         Load at Failure (N), F<sub>u</sub>
                                 </td>
                                <td>
-                                         Compressive Strength(N/mm<sup>2</sup>) f<sub>c</sub> = Fu/Ac
+                                         Compressive Strength(N/mm<sup>2</sup>) f<sub>c</sub> = F<sub>u</sub>/A<sub>c</sub>
                                 </td>
                                  <td>
-                                         Check 0.85 f<sub>ca</sub>≤fc≤1.15fca
+                                         Check 0.85 f<sub>ca</sub>≤f<sub>c</sub>≤1.15f<sub>ca</sub>
                                 </td>
                  </tr>
                  <tr>
