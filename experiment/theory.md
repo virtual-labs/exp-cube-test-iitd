@@ -10,13 +10,57 @@ The measured value of strength of concrete specimen is affected by rate of loadi
 
 ### Apparatus:
 
-| Name | Accuracy/Least count |
-| ------ | ------ |
-| Cubes | Conforming to IS: 1199 |
-| Cylinders | Conforming to IS:1199|
-| Compression Testing Machine (CTM) | 	Conforming to IS:14858 |
-| Ruler | 	0.2 mm |
-| Weighing device | 1 g |
+<table>
+	<tr style="font-weight: bold;">
+		<td>
+			Name
+		</td>
+		<td>
+			Accuracy/Least count
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Cubes
+		</td>
+		<td>
+			Conforming to IS: 1199
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Cylinders
+		</td>
+		<td>
+			Conforming to IS:1199
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Compression Testing Machine (CTM)
+		</td>
+		<td>
+			Conforming to IS:14858
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Ruler
+		</td>
+		<td>
+			0.2 mm
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Weighing device
+		</td>
+		<td>
+			1 g
+		</td>
+	</tr>
+</table>
+
 
 <img src="images/t2.png" height="400px"/>
 
