@@ -897,7 +897,7 @@ function showmoveclk()
                 }, stepTime);
         }
 
-        animateValue("value", 0, 103, 2000);
+        animateValue("value", 0, 127, 2000);
         /*Countdown Timer Animation Code End*/
         document.getElementById("press1").style.visibility="visible";
         document.getElementById("press2").style.visibility="visible";
@@ -1121,7 +1121,7 @@ function showmoveclk2()
                 }, stepTime);
         }
 
-        animateValue("values2", 0, 103, 2000);
+        animateValue("values2", 0, 138, 2000);
         /*Countdown Timer Animation Code End*/
         document.getElementById("press1s2").style.visibility="visible";
         document.getElementById("press2s2").style.visibility="visible";
@@ -1344,7 +1344,7 @@ function showmoveclk3()
                 }, stepTime);
         }
 
-        animateValue("values3", 0, 103, 2000);
+        animateValue("values3", 0, 104, 2000);
         /*Countdown Timer Animation Code End*/
         document.getElementById("press1s3").style.visibility="visible";
         document.getElementById("press2s3").style.visibility="visible";
@@ -1568,7 +1568,7 @@ function showmoveclk4()
                 }, stepTime);
         }
 
-        animateValue("values4", 0, 103, 2000);
+        animateValue("values4", 0, 133, 2000);
         /*Countdown Timer Animation Code End*/
         document.getElementById("press1s4").style.visibility="visible";
         document.getElementById("press2s4").style.visibility="visible";
