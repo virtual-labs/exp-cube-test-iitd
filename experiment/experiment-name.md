@@ -1,1 +1,1 @@
-## Compressive Strength Test of Concrete (Cube)
+## Compressive Strength of Concrete Test (Cube)
