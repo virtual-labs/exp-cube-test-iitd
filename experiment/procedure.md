@@ -137,7 +137,7 @@ Shape of specimen:  ______________<br>
                                 </td>
                  </tr>
 </table>
-**Results:** <br>
+**Results:**  <br>
 Date of test:   ____________________<br>
 Shape and size of the specimen in mm:   ____________________<br>
 Age of specimen at date of test:    ____________________<br>
