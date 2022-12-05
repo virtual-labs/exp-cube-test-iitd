@@ -2,7 +2,8 @@
 
 Concrete as a material is valued for its compressive strength. Of all the properties of hardened concrete, compressive strength is the most important. Compressive strength of concrete is required for assuring the design strength. It is also used to obtain an estimate of flexural strength and elastic modulus by means of established relationships.<br>
 
-$$E_c = 5000 \sqrt{f_{ck}} $$
+$$E_c = 5000 \sqrt{f_{ck}} $$ <br>
+
 $$f_{ct} = 0.7 \sqrt{f_{ck}} $$
 
 
