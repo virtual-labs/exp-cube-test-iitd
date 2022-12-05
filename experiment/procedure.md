@@ -23,6 +23,13 @@ Figure. Unsatisfactory failure of cube specimen<br><br>
 Average of three values shall be taken as the representative of the batch provided the individualvariation is not more than Â± 15 percent of the average.<br>
 Otherwise repeat test shall be made,however if there is no further sample then the average of two closest values may be taken as the average result.<br>
 The compressive strength shall be expressed to the nearest 0.5 MPa.<br><br>
+
+The compressive strength is given by the equation
+$$f_c = F/A_c $$
+where f<sub>c</sub> = compressive strength, in MPa <br>
+F = minimum load, in N and <br>
+A<sub>c</sub> = cross-sectional area (in mm<sup>2</sup>) of the specimen on which the compressive force acts. <br><br>
+
 For _____________-day strength:<br>
 Shape of specimen:  ______________<br>
 <table>
