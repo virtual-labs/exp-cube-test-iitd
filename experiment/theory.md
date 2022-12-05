@@ -68,5 +68,5 @@ The test machine shall be in calibration at the time of test. The calibration sh
 
 Figure Compression Testing Machine<br><br>
 
-Number of specimens: At least three specimens shall be tested for each age of tests.
-Testing conditions: Tests shall be made at the recognized ages of the test specimens, the most usual being 7 and 28 days.
+Number of specimens: At least three specimens shall be tested for each age of tests. <br>
+Testing conditions: Tests shall be made at the recognized ages of the test specimens, the most usual being 7 and 28 days. The ages shall be calculated from the time of the addition of water to the dry ingredients.
