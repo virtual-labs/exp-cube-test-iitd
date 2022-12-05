@@ -6,11 +6,12 @@
 3. The length of thespecimen shall be taken to the nearest 0.2 mm.<br><br>
 **Positioning**
 4. The bearing surfaces of the testing machine and of theloading strips shall be wiped clean before positioning the specimen.<br>
-5. Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly to the direction of casting.<br><br>
+5. Place the specimen in the CTM.Cube specimens shall be compressed perpendicularly to the direction of casting.<br>
+6. The specimen shall be centered on the lower platen to an accuracy of 1% of the designated size of cubic or diameter of cylindrical specimen.<br><br>
 **Rate of Loading**
-6. The load shall be applied without shock and increasedcontinuously at a nominal rate of14 MPa/min.<br><br>
+7. The load shall be applied without shock and increasedcontinuously at a nominal rate of14 MPa/min until no greater load can be sustained. <br><br>
 **Failure load**
-7. The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.<br><br>
+8. The maximum load applied shall then be recorded. Theappearance of concrete and any unusual features in thetype of failure shall also be noted.<br><br>
 **Assessment of type of failure**
 If the failure for cube/cylinder specimens is satisfactory or unsatisfactory as shown in the following figures, this fact shall be recorded.<br>
 If the failure pattern is unsatisfactory, then the type of failure recorded using the pattern number as shown in the following figures closest to that observed shall be indicated.<br><br>
