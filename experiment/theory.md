@@ -10,6 +10,7 @@ The platen effect decreases away from the interface towards the center of the sp
 The measured value of strength of concrete specimen is affected by rate of loading. It is low when the rate of loading is low. For the purpose of uniformity and meaningful comparison between different test results, the rate of loading has been specified as 14 MPa/min.<br>
 
 ### Apparatus:
+The test machine shall be in calibration at the time of test. The calibration shall be carried out atleast once per year. <br>
 
 <table>
 	<tr style="font-weight: bold;">
