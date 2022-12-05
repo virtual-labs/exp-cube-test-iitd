@@ -24,6 +24,7 @@ Average of three values shall be taken as the representative of the batch provid
 Otherwise repeat test shall be made,however if there is no further sample then the average of two closest values may be taken as the average result.<br>
 The compressive strength shall be expressed to the nearest 0.5 MPa.<br><br>
 
+
 The compressive strength is given by the equation
 $$f_c = F/A_c $$
 where f<sub>c</sub> = compressive strength, in MPa <br>
