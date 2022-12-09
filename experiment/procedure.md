@@ -15,9 +15,9 @@
 **Assessment of type of failure**
 If the failure for cube/cylinder specimens is satisfactory or unsatisfactory as shown in the following figures, this fact shall be recorded.<br>
 If the failure pattern is unsatisfactory, then the type of failure recorded using the pattern number as shown in the following figures closest to that observed shall be indicated.<br><br>
-<img src="images/p1.png"/>
+<img src="images/p1 clear.png"/>
 Figure. Satisfactory failure of cube specimen<br><br>
-<img src="images/p2.png"/>
+<img src="images/p2clear.png"/>
 Figure. Unsatisfactory failure of cube specimen<br><br>
 **Observations and Calculation:**
 Average of three values shall be taken as the representative of the batch provided the individualvariation is not more than Â± 15 percent of the average.<br>
