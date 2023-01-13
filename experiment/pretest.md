@@ -40,3 +40,10 @@ Q7. How to calculate the compressive strength of the specimen?<br>
 B peak strain / cross-sectional area<br>
 C peak stress / cross-sectional area<br>
 D volume / cross-sectional area<br><br>
+
+
+Q8. After casting, an ordinary cement concrete on drying <br>
+A Expands<br>
+B mix<br>
+C shrinks<br>
+D **none of these**<br><br>
