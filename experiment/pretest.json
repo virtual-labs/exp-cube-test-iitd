@@ -61,4 +61,13 @@
 		"d": "volume / cross-sectional area"
 	},
 	"correctAnswer": "a"
+}, {
+	"question": "8. After casting, an ordinary cement concrete on drying ",
+	"answers": {
+		"a": "Expands",
+		"b": "Mix",
+		"c": "Shrinks",
+		"d": "None of these"
+	},
+	"correctAnswer": "c"
 }]
