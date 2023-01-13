@@ -22,3 +22,11 @@ A along the surface parallel to the direction of applied load<br>
 B along the surface perpendicular to the direction of applied load<br>
 **C along the diagonals of the cube**<br>
 D randomly distributed<br><br>
+
+
+Q5. As per the provisions of IS 456 : 2000 , the ( short term ) modulus of elasticity of M40 grade concrete ( in N/mm2 ) can be assumed to be 
+<br>
+**A 31600**  <br>
+B 28500<br>
+C 30000<br>
+D 36000<br><br>
