@@ -1,50 +1,57 @@
-### These steps will be followed for the experiment
+<h3> These steps will be followed for the experiment </h3>
 
-**Preparation of specimens:**
+<h5>Preparation of specimens:</h5>
 
 1. Specimens when received dry shall be kept in water for 24 hours before they are taken for testing. Specimen shall be tested immediately on removal from the water whilst they are still wet. Surface water and grit shall be wiped off the specimens and any projecting fins removed from the surfaces which are to be in contact with the packing strips.
 
 
-**Measurement**
+<h5>Measurement</h5>
 
-2. The mass and dimensions of the specimen shall be noted before testing.
+1. The mass and dimensions of the specimen shall be noted before testing.
 
-3. The length of the specimen shall be taken to the nearest 0.2 mm.
-
-
-**Positioning**
-
-4. The bearing surfaces of the testing machine and of the loading strips shall be wiped clean before positioning the specimen.
-
-5. Place the specimen in the CTM. Cube specimens shall be compressed perpendicularly to the direction of casting.
+2. The length of the specimen shall be taken to the nearest 0.2 mm.
 
 
-**Rate of Loading**
+<h5>Positioning</h5>
 
-6. The load shall be applied without shock and increased continuously at a nominal rate of 14 MPa/min.
+1. The bearing surfaces of the testing machine and of the loading strips shall be wiped clean before positioning the specimen.
+
+2. Place the specimen in the CTM. Cube specimens shall be compressed perpendicularly to the direction of casting.
+
+3. The specimen shall be centered on the lower platen to an accuracy of 1 percent of the designated size of cubic, or diameter of cylindrical specimens.
+
+<h5>Rate of Loading</h5>
+
+1. The load shall be applied without shock and increased continuously at a nominal rate of 14 MPa/min.
 
 
-**Failure load**
+<h5>Failure load</h5>
 
-7. The maximum load applied shall then be recorded. The appearance of concrete and any unusual features in the type of failure shall also be noted.
+1. The load shall be applied without shock and increased continuously at a nominal rate of 14 MPa/min until no greater load can be sustained.
 
-
-**Assessment of type of failure**
+<h5>Assessment of type of failure</h5>
 
 If the failure for cube/cylinder specimens is satisfactory or unsatisfactory as shown in the following figures, this fact shall be recorded.
 
 If the failure pattern is unsatisfactory, then the type of failure recorded using the pattern number as shown in the following figures closest to that observed shall be indicated.
 <br>
-<img src="images/p1.png"/>
+<img src="images/cube1.png"/>
 <br>
 Figure. Satisfactory failure of cube specimen
 <br><br>
-<img src="images/p2.png"/>
+<img src="images/cube2.png"/>
 <br>
 Figure. Unsatisfactory failure of cube specimen<br><br>
 
 
-**Observations and Calculation:**
+<h5>Observations and Calculation:</h5>
+
+The compressive strength is given by the equation:<br>
+<div align="middle">f<sub>c</sub> = F / A<sub>c</sub></div><br>
+where,
+f<sub>c</sub> = tensile   strength, in MPa <br>
+F = minimum load, in N <br>
+A<sub>c</sub> = cross-sectional area ( in mm2 ) of the specimen on which the tensile force acts.
 
 Average of three values shall be taken as the representative of the batch provided the individual variation is not more than Â± 15 percent of the average.<br>
 Otherwise repeat test shall be made, however if there is no further sample then the average of two closest values may be taken as the average result.<br>
@@ -158,7 +165,7 @@ Shape of specimen:  ______________<br>
                  </tr>
 </table>
 
-**Results:**
+<h5>Results:</h5>
 
 Date of test:   ____________________<br>
 
@@ -172,8 +179,9 @@ Average Compressive strength:   ____________________<br>
 
 Type of failure (satisfactory or unsatisfactory):   ____________________<br><br>
 
-**Precautions**
+<h5>Precautions:</h5>
 
 1. Damaged specimens shall not be tested.<br>
 2. The time between the extraction of the specimen from the curing tank until the test shall be as short as possible or not more than 2 hours.<br>
 3. Cube specimens shall be compressed perpendicularly to the direction of casting.<br>
+4. The actual dimensions of test specimens shall conform to IS 10086. If the actual dimensions are within the tolerance limits as mentioned in IS 10086, the strength may be calculated on the basis of designated size. If the actual dimensions are outside this tolerance, the strength calculation shall be based on the actual dimensions of the test specimen, however, the perpendicularity of the surface of specimens should be maintained as per IS 10086.<br>
