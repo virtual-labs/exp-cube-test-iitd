@@ -34,6 +34,8 @@
 If the failure for cube/cylinder specimens is satisfactory or unsatisfactory as shown in the following figures, this fact shall be recorded.
 
 If the failure pattern is unsatisfactory, then the type of failure recorded using the pattern number as shown in the following figures closest to that observed shall be indicated.
+
+
 <br>
 <img src="images/cube1.png"/>
 <br>
