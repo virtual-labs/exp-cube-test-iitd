@@ -1,0 +1,74 @@
+
+/home/runner/work/exp-cube-test-iitd/exp-cube-test-iitd/experiment/simulation/main.js
+     1:10  warning  'navNext1' is defined but never used             no-unused-vars
+    13:10  warning  'navNext2' is defined but never used             no-unused-vars
+    46:10  warning  'navNext3' is defined but never used             no-unused-vars
+    77:10  warning  'navNext4' is defined but never used             no-unused-vars
+    98:10  warning  'navNext5' is defined but never used             no-unused-vars
+   139:10  warning  'navNext6' is defined but never used             no-unused-vars
+   160:10  warning  'navNext4a' is defined but never used            no-unused-vars
+   182:10  warning  'navNext5a' is defined but never used            no-unused-vars
+   223:10  warning  'navNext6a' is defined but never used            no-unused-vars
+   245:10  warning  'navNext4b' is defined but never used            no-unused-vars
+   267:10  warning  'navNext5b' is defined but never used            no-unused-vars
+   310:10  warning  'navNext4c' is defined but never used            no-unused-vars
+   332:10  warning  'navNext5c' is defined but never used            no-unused-vars
+   373:10  warning  'navNext6c' is defined but never used            no-unused-vars
+   386:10  warning  'navNext6b' is defined but never used            no-unused-vars
+   401:10  warning  'navNext7' is defined but never used             no-unused-vars
+   410:10  warning  'navNext8' is defined but never used             no-unused-vars
+   428:10  warning  'navNext9' is defined but never used             no-unused-vars
+   496:10  warning  'agesizeIn' is defined but never used            no-unused-vars
+   579:10  warning  'tunnu' is defined but never used                no-unused-vars
+   609:10  warning  'tunnu2' is defined but never used               no-unused-vars
+   638:10  warning  'tunnu3' is defined but never used               no-unused-vars
+   667:10  warning  'tunnu4' is defined but never used               no-unused-vars
+   697:10  warning  'movecube' is defined but never used             no-unused-vars
+   709:10  warning  'mcurcube1' is defined but never used            no-unused-vars
+   721:10  warning  'mcurcube2' is defined but never used            no-unused-vars
+   740:10  warning  'movecloth' is defined but never used            no-unused-vars
+   764:10  warning  'isInputNumber' is defined but never used        no-unused-vars
+   784:10  warning  'movecube1' is defined but never used            no-unused-vars
+   801:10  warning  'movecube2' is defined but never used            no-unused-vars
+   829:10  warning  'movecube3' is defined but never used            no-unused-vars
+   841:10  warning  'movecube4' is defined but never used            no-unused-vars
+   852:10  warning  'showbigclk' is defined but never used           no-unused-vars
+   870:10  warning  'showmoveclk' is defined but never used          no-unused-vars
+   883:9   warning  Move function declaration to function body root  no-inner-declarations
+   924:9   warning  Move function declaration to function body root  no-inner-declarations
+   978:10  warning  'stopmoveclk' is defined but never used          no-unused-vars
+  1008:10  warning  'movecube11' is defined but never used           no-unused-vars
+  1025:10  warning  'movecube22' is defined but never used           no-unused-vars
+  1053:10  warning  'movecube33' is defined but never used           no-unused-vars
+  1065:10  warning  'movecube44' is defined but never used           no-unused-vars
+  1076:10  warning  'showbigclk2' is defined but never used          no-unused-vars
+  1094:10  warning  'showmoveclk2' is defined but never used         no-unused-vars
+  1107:9   warning  Move function declaration to function body root  no-inner-declarations
+  1148:9   warning  Move function declaration to function body root  no-inner-declarations
+  1202:10  warning  'stopmoveclk2' is defined but never used         no-unused-vars
+  1231:10  warning  'movecube111' is defined but never used          no-unused-vars
+  1248:10  warning  'movecube222' is defined but never used          no-unused-vars
+  1276:10  warning  'movecube333' is defined but never used          no-unused-vars
+  1288:10  warning  'movecube444' is defined but never used          no-unused-vars
+  1299:10  warning  'showbigclk3' is defined but never used          no-unused-vars
+  1317:10  warning  'showmoveclk3' is defined but never used         no-unused-vars
+  1330:9   warning  Move function declaration to function body root  no-inner-declarations
+  1371:9   warning  Move function declaration to function body root  no-inner-declarations
+  1425:10  warning  'stopmoveclk3' is defined but never used         no-unused-vars
+  1455:10  warning  'movecube1114' is defined but never used         no-unused-vars
+  1472:10  warning  'movecube2224' is defined but never used         no-unused-vars
+  1500:10  warning  'movecube3334' is defined but never used         no-unused-vars
+  1512:10  warning  'movecube4444' is defined but never used         no-unused-vars
+  1523:10  warning  'showbigclk4' is defined but never used          no-unused-vars
+  1541:10  warning  'showmoveclk4' is defined but never used         no-unused-vars
+  1554:9   warning  Move function declaration to function body root  no-inner-declarations
+  1595:9   warning  Move function declaration to function body root  no-inner-declarations
+  1649:10  warning  'stopmoveclk4' is defined but never used         no-unused-vars
+  1678:10  warning  'ShowLF' is defined but never used               no-unused-vars
+  1717:10  warning  'ShowLoadRes' is defined but never used          no-unused-vars
+  1776:10  warning  'ShowLFinalRes' is defined but never used        no-unused-vars
+  1840:10  warning  'Showrep' is defined but never used              no-unused-vars
+  1952:10  warning  'reset' is defined but never used                no-unused-vars
+
+✖ 69 problems (0 errors, 69 warnings)
+
